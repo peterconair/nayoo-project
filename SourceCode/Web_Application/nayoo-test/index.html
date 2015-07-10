@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nayoo Test API</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap ionicons and custom css -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bower_components/ionicons/css/ionicons.min.css">
+
+    <!-- JS -->
+    <!-- load stamplay sdk, angular, angular-stamplay service -->
+    <script src="./bower_components/stamplay-sdk/dist/stamplay.min.js"></script>
+    <script>
+       // initiate stamplay app with app name
+       Stamplay.init('mayoo');
+    </script>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-stamplay/angular-stamplay.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/services/member.js"></script>
+</head>
+<body ng-app="stamplayApp" ng-controller="MainController as main">
+    <div>
+        <div>
+            <h1>Member List</h1>
+        </div>
+	<div class="row">
+	    <div class="col-sm-4 col-lg-3 text-center" ng-repeat="member in main.memberList">
+               <div>
+                  <p>{{ member.instance.name }}</p>
+               </div>
+        </div>       
+    </div>
+</body>
+</html>
