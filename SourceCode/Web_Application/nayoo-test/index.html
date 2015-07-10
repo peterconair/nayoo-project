@@ -26,6 +26,13 @@
         <div>
             <h1>Member List</h1>
         </div>
+	<form class="text-center" name="memberForm" ng-submit="main.submitMember(main.memberData)">
+		<div class="form-group">
+			<label>Name</label>
+			<input type="text" class="form-control" name="name" ng-model="main.memberData.name" required></input>
+		</div>
+		<button class="btn btn-danger btn-lg btn-block">Add Member</button>
+	</form>
 	<div class="row">
 	    <div class="col-sm-4 col-lg-3 text-center" ng-repeat="member in main.memberList">
                <div>
