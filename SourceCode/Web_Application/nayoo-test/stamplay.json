@@ -1,0 +1,10 @@
+{
+  "appId": "mayoo",
+  "apiKey": "6cff0601b73e2cdec5e01e16c3f66ef0358bdf1eabe90f7121ea4040b42b2cf5",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
