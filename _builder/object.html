@@ -1,0 +1,523 @@
+<html lang="en" ng-app="myApp"><!--<![endif]--><!-- BEGIN HEAD -->
+<head>
+  <meta charset="utf-8">
+  <title>Smart Life Style</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+   
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,700|Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="assets/css/editorcss.gz.css">
+
+  <!-- END GLOBAL MANDATORY STYLES -->
+   
+  <link rel="shortcut icon" href="assets/images/favicon32.png" size="32x32">
+  <link rel="icon" href="assets/images/favicon32.png" sizes="32x32">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <style>
+  select {
+  display: initial;
+}
+  </style>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body ng-controller="myCtrl">
+
+
+  <div id="header" class="topbar">
+<button class="topbar-appslist icon icon-appslist" data-nav="home"></button>
+
+<div class="topbar-title no-bg">
+
+  <a href="#" target="_blank" class="iconbtn mdi mdi-share link-btn"></a>
+  Smart Life Style
+
+</div>
+
+<div class="topbar-actions" style="display:block">
+  <div class="switch">
+    <input data-app-id="559468cb19dc625a5c457794" class="switch-status" type="checkbox" checked="">
+    <span></span>
+  </div>
+  <button id="settings-btn" class="topbar-settings iconbtn mdi mdi-information-outline"></button>
+</div>
+
+
+<div class="topbar-actions" style="display:none">
+  <button id="referral-btn" data-hook="invite" class="topbar-settings iconbtn mdi mdi-gift" style="font-size:1.3em"></button>
+</div>
+
+<div class="topbar-rightside">
+  <div class="avatar" style="background-image: url( https://lh5.googleusercontent.com/-EAX8Q2fER2g/AAAAAAAAAAI/AAAAAAAABc8/xiXX3CVOKVw/photo.jpg?sz=50 )"></div>
+  <div class="topbar-dropdown">
+    <ul>
+      <li><a href="" class="toProfile">Profile</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</div></div>
+  <div id="save-notification" class="notification">
+    <p>Your data has been saved</p>
+  </div>
+
+  <div id="success-notification" class="notification notification-positive">
+    <button class="iconbtn mdi mdi-close closebtn"></button>
+    <h2 class="notification-title"></h2>
+    <p class="notification-body"></p>
+  </div>
+
+  <div id="warning-notification" class="notification notification-warning">
+    <button class="iconbtn mdi mdi-close closebtn"></button>
+    <h2 class="notification-title"></h2>
+    <p class="notification-body"></p>
+  </div>
+
+  <div id="error-notification" class="notification notification-negative">
+    <button class="iconbtn mdi mdi-close closebtn"></button>
+    <h2 class="notification-title"></h2>
+    <p class="notification-body"></p>
+  </div>
+  
+  <div id="alert-section" class="row" style="display: none; height: 50px; background-color: red;">
+    <h4 style="margin-top: 10px;border-bottom: none;color: white;">It looks like you have AdBlock enabled: this may interfere with ours functionalities. Please disable it and reload the page.</h4>
+  </div>
+
+
+  <div class="row" id="hero-section" style="color: white; margin-top: 0px; display: none;"> 
+    <div class="col8 sheet sheet-page login-background" style="box-shadow:none;">
+      <div class="row">
+        <i class="mdi mdi-close" style="float:right;cursor:pointer;" id="close-hero"></i>
+      </div>
+      <div class="row">
+        <div class="content col3 text-left">
+          <h4 style="font-weight:100;font-size:2.5rem; color:white;">Welcome to Stamplay</h4>
+          <p style="color: rgb(172, 172, 172);font-size:1rem;">
+            Your account has been created successfully!<br>
+            Take a look at these resources to help you get started.
+          </p>
+          <div class="row tight tight3" style="margin-top:30px;">
+            <div class="col1 content">
+              <button class="btn btn-yellow gotoblank" href="https://stamplay.com/docs/main"><i class="mdi mdi-xml"></i> API docs</button>
+            </div>
+            <div class="col1 content">
+              <button class="btn btn-yellow gotoblank" href="https://blog.stamplay.com/category/guides-and-tutorials/"><i class="mdi mdi-file-document"></i> Guides and Tutorials</button>
+            </div>
+            <div class="col1 content">
+              <button class="btn btn-yellow gotoblank" href="https://github.com/Stamplay"><i class="mdi mdi-github-circle"></i> Examples on Github</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+
+  <div id="page-container" class="container"><div class="row">
+	<!-- BEGIN SIDEBAR-->
+	<div id="main-sidebar" class="content col1"><ul class="mainnav">
+  <li>
+    <a href="" class="icon icon-users ">Users</a>
+    <ul>
+      <li class="editor-section" data-dir="users" data-section="authentication">
+        <a href="#">Authentication</a>
+      </li>
+      <li class="editor-section" data-dir="users" data-section="roles">
+        <a href="#">Roles</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="" class="icon icon-components ">Objects</a>
+    <ul>
+      
+      <li class="editor-section" data-dir="objects" data-section="costtype">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>costtype
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="drivercost">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>drivercos..
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="driver">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>driver
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="productcate">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>productca..
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="catstatus">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>catstatus
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="truck">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>truck
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="test">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>Test
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="testapi">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>testapi
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="department">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>Departmen..
+        </a>
+      </li>
+      
+
+      <li class="editor-section" data-dir="objects" data-section="create">
+        <a href="#">
+        <i class="mdi mdi-plus"></i> Add</a>
+      </li>      
+    </ul>
+  </li>
+  <li>
+    <a href="" class="icon icon-flows ">Tasks</a>
+    <ul>
+      <li class="editor-section" data-dir="flows" data-section="configure">
+        <a href="#">Manage</a>
+      </li>
+      <li class="editor-section" data-dir="flows" data-section="channels">
+        <a href="#">Components</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="" class="editor-section icon icon-api " data-dir="api" data-section="console">Api console</a>
+  </li>
+  <li>
+    <a href="" data-dir="hosting" data-section="manage" class="editor-section icon icon-hosting ">
+    Hosting</a>
+  </li>
+  <li>
+    <a href="" class="icon icon-data ">Data</a>  
+    <ul id="admin-sub-menu">
+    
+      
+      <li class="editor-section" data-dir="data" data-section="user">
+        <a href="#">
+        <i class="mdi mdi-database-outline"></i>User</a>
+      </li>
+      
+    
+      
+      <li class="editor-section" data-dir="data" data-section="cobject">
+        <a href="#">
+        <i class="mdi mdi-database-outline"></i>Objects</a>
+      </li>
+      
+    
+      
+    
+      
+      <li class="editor-section" data-dir="data" data-section="form">
+        <a href="#">
+        <i class="mdi mdi-database-outline"></i>Form</a>
+      </li>
+      
+    
+      
+    
+    <li class="editor-section" data-dir="data" data-section="export-stmply-app-data">
+      <a href="#">
+      <i class="mdi mdi-file-document"></i> Export data</a>
+    </li>            
+    </ul>
+  </li>   
+</ul></div>
+	<!-- END SIDEBAR -->
+
+	<!-- BEGIN SECTION CONTENT -->
+<div id="section-content" class="content col5" style="min-height: 500px"><div class="content col5">
+
+  <div class="sheet sheet-page">
+
+    <div class="row">
+      <h1>{{firstName}}{{ObjectID === "" ? "New Object" : ObjectID}}</h1>
+      <div class="sheet-actions">
+
+        <button class="iconbtn mdi mdi-help-circle"></button>
+      </div>
+    </div>
+
+    <div class="row">
+      <ul class="secondarynav">
+        <li class="navbar-btn selected" data-tab="structure">Properties</li>
+      </ul>
+	  
+	   <button id="add-object"
+		class="iconbtn mdi mdi-plus secondarynav-addbtn"
+		ng-click="AddObject()">
+		   <span>Add</span>
+      </button>  
+	      
+    </div>
+
+    <div class="row">
+
+      <div class="content col2">
+        <label for="">Object ID</label>
+        <input type="text" value="testee" ng-model="ObjectID" ng-init="ObjectID='New Object'">
+      </div>
+
+      <div class="content col2">
+        <label for="">API URL</label>
+        <div class="inputbox" ><a href="http://smartcrmapi.chabatech.com/api/cobject/v1/{{ObjectID}}" target="_blank" class="iconbtn mdi mdi-share" style="margin-right:5px" ng-trim="true"></a>/api/cobject/v1/{{(ObjectID|lowercase).replace(" ","_");}}</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="sheet sheet-page" id="sub-content"><h2>Properties</h2>
+
+<div class="row tight tight3">
+	<form class="form-horizontal ng-valid ng-dirty" role="form" ng-submit="addRow()">
+  <div class="input-field content col1">
+    <label for="" class="">Name</label>
+    <input type="text" id="property-name"
+		data-parsley-required="" data-parsley-begin_with_char="" 
+		data-parsley-nonconsecutiveld="" data-parsley-no_whitespaces_or_specials="" 
+		data-parsley-trigger="change" ng-model="field_name1" required>
+  </div>      
+  
+  
+  <div class="content col1">
+    <label for="">Type</label>
+    <div class="select-wrapper">
+
+	
+	<select class="initialized" id="property-type" ng-model="Display_type1" required> 
+	  <option value=""></option>
+      <option data-type="string">String</option>
+      <option data-type="date">Date</option>
+      <option data-type="number">Number</option>
+      <option data-type="boolean">Boolean</option>
+      <option data-type="plain_object">Plain Object</option>
+      <option data-type="array_string">Array String</option>
+      <option data-type="array_number">Array Number</option>
+      <option data-type="file">File</option>
+      <option data-type="user-relation">User Relation</option>
+      </select>
+	</div>
+  </div>
+  <div class="content col1 formrow-nolabel">
+    <button class="btn" id="add-property-btn" type="submit">Add property</button>
+  </div>
+  <form>
+</div>
+
+<div class="row">
+  <div class="content col4">
+  
+ <table id="property-table">
+ <tr>	
+	<td>Column Name</td>
+    <td>Type</td>
+    <td>Lenght</td>
+ </tr>
+  <tr ng-repeat="x in tableProperty">
+    <td><span>{{ x.field_name }}</span></td>
+  <td><span>{{ x.Display_type}}</span></td>
+ <td><span>{{ x.max_lenght }}</span></td>
+  </tr>
+</table>
+
+  </div>
+</div></div>
+
+  <div id="delete-container" class="popup-container">
+  <!-- INSERT HERE THE DELETE ROLE MODAL CONTENT -->
+  </div>
+  <div id="info-modal">
+  <!-- INSERT HERE THE INFO ROLE MODAL CONTENT -->
+  <div class="popup-container">
+
+  <div class="popup sheet sheet-box">
+    <button class="iconbtn mdi mdi-close closebtn close-popup-info"></button>
+
+    <div class="row popup-title info-component">
+      <h2 style="margin-bottom:0px;">
+        <img src="https://drrjhlchpvi7e.cloudfront.net/editor/664b291/img/modules/cobject.png" style="width:50px;">
+        Objects
+      </h2>
+      <p style="font-weight: 400;">Define and manage your own entities</p>
+    </div>
+
+
+      <div class="content col2">
+      <label>Actions (do that)</label>
+      
+        
+          <p style="margin-bottom: 5px;padding-left: 10px;">Create an instance</p>
+        
+      
+      </div>
+    </div>
+
+    <div class="row">
+      <button class="btn close-popup-info">Ok</button>
+    </div>
+
+  </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*
+    $("#add-property-btn").click(function(){
+	$('#property-table tr:last')
+		.after('<tr><td><span><font color="blue">'+$("#property-name").val()+
+		'</font></span></td><td><span><font color="blue">'+$("#property-type").val()+'</font></span</td><td>100</td></tr>');
+	$("#property-name").val('');
+    });
+	
+	*/
+});
+
+
+var app = angular.module('myApp', []);
+
+
+	app.controller('myCtrl', function($scope,$http) {
+	
+	
+	
+	$scope.tableProperty = [
+		{ 'field_name':"Owner",
+		  'Display_type': "String",
+		  'max_lenght': 100},
+		{ 'field_name':"CreateDate",
+		  'Display_type': "Date",
+		  'max_lenght': 20}
+		];
+					
+					
+
+					
+	$scope.addRow = function(){		
+	
+		$scope.tableProperty.push({ 'field_name':$scope.field_name1, 'Display_type': $scope.Display_type1, 'max_lenght':100 });
+		$scope.field_name1='';
+		$scope.Display_type1='';
+		
+		console.log($scope.tableProperty);
+		
+	};
+
+
+		
+		//$scope.ObjectID = "";
+		$scope.AddObject = function()
+		{
+
+			//console.log($scope.tableProperty);
+		
+		  var obj = {
+  "core_entities": {
+    "entity_id": 1,
+    "entity_table_name": "sample string 2",
+    "entity_field_name": "sample string 3",
+    "entity_id_column": "sample string 4",
+    "module_id": 1
+  },
+  "core_entities_field": [
+    {
+      "field_id": 1,
+      "entity_id": 1,
+      "table_name": "sample string 2",
+      "table_column": "sample string 3",
+      "ui_type": 1,
+      "field_name": "sample string 4",
+      "field_label": "sample string 5",
+      "default_value": "sample string 6",
+      "max_lenght": 1,
+      "display_type": "sample string 7",
+      "quick_view_seq": 1,
+      "quick_create_seq": 1,
+      "list_view_seq": 1,
+      "list_view_col_size": 1,
+      "action_id": 1,
+      "link_to_entity": 1,
+      "group_id": 1,
+      "sequence": 1
+    },
+    {
+      "field_id": 1,
+      "entity_id": 1,
+      "table_name": "sample string 2",
+      "table_column": "sample string 3",
+      "ui_type": 1,
+      "field_name": "sample string 4",
+      "field_label": "sample string 5",
+      "default_value": "sample string 6",
+      "max_lenght": 1,
+      "display_type": "sample string 7",
+      "quick_view_seq": 1,
+      "quick_create_seq": 1,
+      "list_view_seq": 1,
+      "list_view_col_size": 1,
+      "action_id": 1,
+      "link_to_entity": 1,
+      "group_id": 1,
+      "sequence": 1
+    }
+  ]
+};
+
+var req = {
+ method: 'PUT',
+ url: 'http://smartcrmapi.chabatech.com/Api/CoreObject',
+ data:obj
+}
+
+$http(req).success(function(){console.log('ok')}).error(function(result){console.log(result)});
+
+
+				//$http.put("http://smartcrmapi.chabatech.com/Api/CoreObject", obj); //$scope.tableProperty)
+			//};
+			//$http.get("http://smartcrmapi.chabatech.com/Api/Entity/1").success(function(data){ console.log(data);});
+		};
+		
+		
+		$scope.toggle = function() {
+			alert('www');
+		};
+			
+	
+	});
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<html lang="en"><!--<![endif]--><!-- BEGIN HEAD --><head>
+  <meta charset="utf-8">
+  <title> STAMPLAY | Connect. Automate. Invent.</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+   
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,700|Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="assets/css/editorcss.gz.css">
+
+  <!-- END GLOBAL MANDATORY STYLES -->
+   
+  <link rel="shortcut icon" href="assets/images/favicon32.png" size="32x32">
+  <link rel="icon" href="assets/images/favicon32.png" sizes="32x32">
+
+
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+
+
+  <div id="header" class="topbar">
+<button class="topbar-appslist icon icon-appslist" data-nav="home"></button>
+
+<div class="topbar-title no-bg">
+
+  <a href="https://nayoo.stamplayapp.com" target="_blank" class="iconbtn mdi mdi-share link-btn"></a>
+  nayoo
+
+</div>
+
+<div class="topbar-actions" style="display:block">
+  <div class="switch">
+    <input data-app-id="559468cb19dc625a5c457794" class="switch-status" type="checkbox" checked="">
+    <span></span>
+  </div>
+  <button id="settings-btn" class="topbar-settings iconbtn mdi mdi-information-outline"></button>
+</div>
+
+
+<div class="topbar-actions" style="display:none">
+  <button id="referral-btn" data-hook="invite" class="topbar-settings iconbtn mdi mdi-gift" style="font-size:1.3em"></button>
+</div>
+
+<div class="topbar-rightside">
+  <div class="avatar" style="background-image: url( https://lh5.googleusercontent.com/-EAX8Q2fER2g/AAAAAAAAAAI/AAAAAAAABc8/xiXX3CVOKVw/photo.jpg?sz=50 )"></div>
+  <div class="topbar-dropdown">
+    <ul>
+      <li><a href="" class="toProfile">Profile</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</div></div>
+  <div id="save-notification" class="notification">
+    <p>Your data has been saved</p>
+  </div>
+
+  <div id="success-notification" class="notification notification-positive">
+    <button class="iconbtn mdi mdi-close closebtn"></button>
+    <h2 class="notification-title"></h2>
+    <p class="notification-body"></p>
+  </div>
+
+  <div id="warning-notification" class="notification notification-warning">
+    <button class="iconbtn mdi mdi-close closebtn"></button>
+    <h2 class="notification-title"></h2>
+    <p class="notification-body"></p>
+  </div>
+
+  <div id="error-notification" class="notification notification-negative">
+    <button class="iconbtn mdi mdi-close closebtn"></button>
+    <h2 class="notification-title"></h2>
+    <p class="notification-body"></p>
+  </div>
+  
+  <div id="alert-section" class="row" style="display: none; height: 50px; background-color: red;">
+    <h4 style="margin-top: 10px;border-bottom: none;color: white;">It looks like you have AdBlock enabled: this may interfere with ours functionalities. Please disable it and reload the page.</h4>
+  </div>
+
+
+  <div class="row" id="hero-section" style="color: white; margin-top: 0px; display: none;"> 
+    <div class="col8 sheet sheet-page login-background" style="box-shadow:none;">
+      <div class="row">
+        <i class="mdi mdi-close" style="float:right;cursor:pointer;" id="close-hero"></i>
+      </div>
+      <div class="row">
+        <div class="content col3 text-left">
+          <h4 style="font-weight:100;font-size:2.5rem; color:white;">Welcome to Stamplay</h4>
+          <p style="color: rgb(172, 172, 172);font-size:1rem;">
+            Your account has been created successfully!<br>
+            Take a look at these resources to help you get started.
+          </p>
+          <div class="row tight tight3" style="margin-top:30px;">
+            <div class="col1 content">
+              <button class="btn btn-yellow gotoblank" href="https://stamplay.com/docs/main"><i class="mdi mdi-xml"></i> API docs</button>
+            </div>
+            <div class="col1 content">
+              <button class="btn btn-yellow gotoblank" href="https://blog.stamplay.com/category/guides-and-tutorials/"><i class="mdi mdi-file-document"></i> Guides and Tutorials</button>
+            </div>
+            <div class="col1 content">
+              <button class="btn btn-yellow gotoblank" href="https://github.com/Stamplay"><i class="mdi mdi-github-circle"></i> Examples on Github</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+
+  <div id="page-container" class="container"><div class="row">
+	<!-- BEGIN SIDEBAR-->
+	<div id="main-sidebar" class="content col1"><ul class="mainnav">
+  <li>
+    <a href="" class="icon icon-users ">Users</a>
+    <ul>
+      <li class="editor-section" data-dir="users" data-section="authentication">
+        <a href="#">Authentication</a>
+      </li>
+      <li class="editor-section" data-dir="users" data-section="roles">
+        <a href="#">Roles</a>
+      </li>
+      <li class="editor-section" data-dir="users" data-section="permissions">
+        <a href="#">Permissions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="" class="icon icon-components ">Objects</a>
+    <ul>
+      
+      <li class="editor-section" data-dir="objects" data-section="costtype">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>costtype
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="drivercost">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>drivercos..
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="driver">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>driver
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="productcate">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>productca..
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="catstatus">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>catstatus
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="truck">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>truck
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="test">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>Test
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="testapi">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>testapi
+        </a>
+      </li>
+      
+      <li class="editor-section" data-dir="objects" data-section="department">
+        <a href="#">
+        <i class="mdi mdi-hexagon-outline"></i>Departmen..
+        </a>
+      </li>
+      
+
+      <li class="editor-section" data-dir="objects" data-section="create">
+        <a href="#">
+        <i class="mdi mdi-plus"></i> Add</a>
+      </li>      
+    </ul>
+  </li>
+  <li>
+    <a href="" class="icon icon-flows ">Tasks</a>
+    <ul>
+      <li class="editor-section" data-dir="flows" data-section="configure">
+        <a href="#">Manage</a>
+      </li>
+      <li class="editor-section" data-dir="flows" data-section="channels">
+        <a href="#">Components</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="" class="editor-section icon icon-api " data-dir="api" data-section="console">Api console</a>
+  </li>
+  <li>
+    <a href="" data-dir="hosting" data-section="manage" class="editor-section icon icon-hosting ">
+    Hosting</a>
+  </li>
+  <li>
+    <a href="" class="icon icon-data ">Data</a>  
+    <ul id="admin-sub-menu">
+    
+      
+      <li class="editor-section" data-dir="data" data-section="user">
+        <a href="#">
+        <i class="mdi mdi-database-outline"></i>User</a>
+      </li>
+      
+    
+      
+      <li class="editor-section" data-dir="data" data-section="cobject">
+        <a href="#">
+        <i class="mdi mdi-database-outline"></i>Objects</a>
+      </li>
+      
+    
+      
+    
+      
+      <li class="editor-section" data-dir="data" data-section="form">
+        <a href="#">
+        <i class="mdi mdi-database-outline"></i>Form</a>
+      </li>
+      
+    
+      
+    
+    <li class="editor-section" data-dir="data" data-section="export-stmply-app-data">
+      <a href="#">
+      <i class="mdi mdi-file-document"></i> Export data</a>
+    </li>            
+    </ul>
+  </li>   
+</ul></div>
+	<!-- END SIDEBAR -->
+
+	<!-- BEGIN SECTION CONTENT -->
+	<div id="section-content" class="content col5" style="min-height: 500px"><div class="sheet sheet-page">
+  <div class="row">
+    <h1>nayoo</h1>
+  </div>
+
+  <div class="row bottompadded">
+    <div class="content col2">
+       <label>URL</label>
+      <div class="inputbox">
+        <button class="iconbtn mdi mdi-share link-btn" data-link="nayoo.stamplayapp.com">
+        </button>nayoo.stamplayapp.com
+      </div>
+    </div>  
+    <div class="content col1">
+      <label>App ID</label>
+      <div class="inputbox">nayoo</div>
+    </div>
+    <div class="content col1">
+      <label>Api version</label>
+      <div class="inputbox">v1</div>
+    </div>  
+  </div>
+    
+  <div class="row">
+    <div class="content col3">
+      <label>API KEY</label>
+      <div id="apikey" class="inputbox" value="09a7c695b1e44c028b3e8b2723b7d6a112845f4f4da92f2911f06c58976cdce8">09a7c695b1e44c028b3e8b2723b7d6a112845f4f4da92f2911f06c58976cdce8</div>
+    </div>    
+    <div class="content col1 formrow-nolabel">
+      <button id="apikey-btn" class="btn">Regenerate key</button>
+    </div>    
+  </div>
+  <div class="row bottompadded">
+    <div class="content col4">
+      <p>API key can be used to have full access and create, update and delete your content in this app</p>
+    </div>
+  </div>
+</div>
+
+<div class="sheet sheet-page">
+  <h2>Plan</h2>
+
+  <div class="row">
+    <div class="content col1">
+      <label>Name</label>
+      <input type="text" value="Core" disabled="">
+    </div>
+
+    <div class="content col2">
+      <label>
+        
+          Stats reset on
+        </label>
+      <input type="text" value="Aug 2, 2015" disabled="">
+    </div>
+    
+    <div class="content col1 formrow-nolabel">
+      <button id="upgade-plan-btn" class="btn">Upgrade plan</button>
+    </div>
+    
+  </div>
+
+    
+
+
+  <div class="row tight tight3 bottompadded">
+    <div class="content col4 linechart">
+      <div class="linechart-label">API calls from Jul 2, 2015 to Aug 2, 2015</div>
+      <div class="linechart-data"><span>33</span> / 50000</div>
+      <div class="linechart-body">
+        <div class="linechart-bar" style="width:0.066%"></div>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+
+
