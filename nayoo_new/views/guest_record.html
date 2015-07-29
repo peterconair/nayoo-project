@@ -29,43 +29,35 @@
             </div>
         </div>
         <div class="col w-md w-auto-xs bg-light dk bg-auto b-l hide" id="aside">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">Cost Type Name</span> :</label>
-                            <div class="col-sm-7">
-                                <input type="hidden" class="form-control" id="txtId" name="id" ng-model="user.id">
-                                <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
+            <form name="newMail" class="form-horizontal m-t-lg">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">Cost Type Name</span> :</label>
+                                <div class="col-sm-7">
+                                    <input type="hidden" class="form-control" id="txtId" name="id" ng-model="user.id">
+                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">Cost Type Name En</span> :</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="txtNameEN" name="NameEN" autocomplete="off" tabindex="2" ng-model="user.NameEN">
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">Cost Type Name En</span> :</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtNameEN" name="NameEN" autocomplete="off" tabindex="2" ng-model="user.NameEN">
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label class="control-label col-sm-4"></label>
-                            <div class="col-sm-8">
-                                <div class="checkbox-list">
-                                    <label class="checkbox-inline" style="margin-left: 20px">
-                                        <input type="checkbox" id="chkIsActive" name="IsActive"><span id="spnActive"> Active</span>
-                                    </label>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4"></label>
+                                <div class="col-sm-8">
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-inline" style="margin-left: 20px">
+                                            <input type="checkbox" id="chkIsActive" name="IsActive"><span id="spnActive"> Active</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+            </form>
+            </div>
             </div>
         </div>
-    </div>
-</div>
