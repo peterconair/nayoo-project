@@ -1,88 +1,71 @@
-<div class="bg-light lter b-b wrapper-md">
-<button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" 
-        ui-toggle-class="show" target="#aside" ng-controller="GuestRecordCtrl" ng-click="toggleModal()">
-    <i class="fa fa-plus"></i> Add
-</button>
-  <h1 class="m-n font-thin h3">Guest Record</h1>
-</div>
-<div class="wrapper-md">
-  <div class="panel panel-default" ng-controller="GuestRecordCtrl">
-    <div class="panel-heading">
-      DataTables
+<div ng-controller="MailListCtrl">
+    <div class="bg-light lter b-b wrapper-md">
+        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
+            <i class="fa fa-plus"></i> Add
+        </button>
+        <h1 class="m-n font-thin h3">Guest Record</h1>
     </div>
-    <div class="table-responsive">
-      <table ui-jq="dataTable" ui-options="{
-          sAjaxSource: 'api/datatable.json',
-          aoColumns: [
-            { mData: 'engine' },
-            { mData: 'browser' },
-            { mData: 'platform' },
-            { mData: 'version' },
-            { mData: 'grade' }
-          ]
-        }" class="table table-striped b-t b-b table-hover">
-        <thead>
-          <tr>
-            <th  style="width:20%">Rendering engine</th>
-            <th  style="width:25%">Browser</th>
-            <th  style="width:25%">Platform(s)</th>
-            <th  style="width:15%">Engine version</th>
-            <th  style="width:15%">CSS grade</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="wrapper-md">
+            <div class="panel panel-default" ng-controller="MailListCtrl">
+                <!-- list -->
+                <ul class="list-group list-group-lg no-radius m-b-none m-t-n-xxs">
+                    <li ng-repeat="mail in mails | filter:fold" ng-class="labelClass(mail.label)" class="list-group-item clearfix b-l-3x">
+                        <a ui-sref="app.page.profile" class="avatar thumb pull-left m-r">
+                            <img ng-src="{{mail.avatar}}">
+                        </a>
+                        <div class="pull-right text-sm text-muted">
+                            <span class="hidden-xs">{{ mail.date | fromNow }}</span>
+                            <i class="fa fa-paperclip ng-hide m-l-sm" ng-show="{{mail.attach}}"></i>
+                        </div>
+                        <div class="clear">
+                            <div><a ui-sref="app.mail.detail({mailId:mail.id})" class="text-md">{{mail.subject}}</a><span class="label bg-light m-l-sm">{{mail.label}}</span></div>
+                            <div class="text-ellipsis m-t-xs">{{mail.content | limitTo:100}}</div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- / list -->
+            </div>
+        </div>
+        <div class="col w-md w-auto-xs bg-light dk bg-auto b-l hide" id="aside">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">Cost Type Name</span> :</label>
+                            <div class="col-sm-7">
+                                <input type="hidden" class="form-control" id="txtId" name="id" ng-model="user.id">
+                                <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">Cost Type Name En</span> :</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="txtNameEN" name="NameEN" autocomplete="off" tabindex="2" ng-model="user.NameEN">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4"></label>
+                            <div class="col-sm-8">
+                                <div class="checkbox-list">
+                                    <label class="checkbox-inline" style="margin-left: 20px">
+                                        <input type="checkbox" id="chkIsActive" name="IsActive"><span id="spnActive"> Active</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-
-<!-- Modal -->
-<div class="modal fade bs-example-modal-sm" id="frmPopup" tabindex="-1" role="dialog" aria-labelledby="GuestRecordCtrl" ng-app="app" >
-    <div class="modal-dialog " >
-        <div class="modal-content">
-			<form class="form-horizontal" id="frmDetail" ng-submit="submitForm()">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title"><span id="h4AddEditCostType">Add / Edit Guest Record</span></h4>
-				</div>
-				<div class="modal-body">
-					
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-4 control-label"><span id="spnName">Cost Type Name</span> :</label>
-                                <div class="col-sm-8">
-                                    <input type="hidden" class="form-control" id="txtId" name="id" ng-model="user.id">
-                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1"  ng-model="user.Name" required>
-								</div>
-							</div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-4 control-label"><span id="spnNameEn">Cost Type Name En</span> :</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="txtNameEN" name="NameEN" autocomplete="off" tabindex="2" ng-model="user.NameEN">
-								</div>
-							</div>
-                            <div class="form-group">
-								<label class="control-label col-sm-4"></label>
-								<div class="col-sm-8">
-									<div class="checkbox-list">
-										<label class="checkbox-inline" style="margin-left: 20px">
-											<input type="checkbox" id="chkIsActive" name="IsActive"><span id="spnActive"> Active</span> 
-										</label>                                           
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="submit" id="btnSave" class="btn btn-primary" tabindex="4"><span id="spnSave"> Save</span> </button>
-					<button type="button" class="btn btn-default" data-dismiss="modal"><span id="spnClose"> Close</span> </button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-<!--End Modal-->
