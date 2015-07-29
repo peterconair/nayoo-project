@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "890ef542-3efa-43a1-87b0-ae64ae0addcf",
-      "lastModifiedDate": 1438166572490,
+      "lastModifiedDate": 1438178555627,
       "creationDate": 1438153695069
     },
     "XDK-app-designer": "false",
@@ -48,38 +48,63 @@
           "Fullscreen": true
         },
         "isActive_": true,
-        "appName_": "Nayoo_Mobile",
+        "appName_": "Nayoo",
         "appID_": "xdk.intel.blank.template.crosswalk",
         "appAccess_": [
           {
             "origin": "*"
           }
         ],
-        "icons_": [],
-        "splashes_": [
+        "icons_": [
           {
-            "relPath": "img/splash_mdpi.png",
-            "density": "mdpi",
-            "height": 470,
-            "width": 320,
-            "orientation": "portrait"
+            "relPath": "img/icon_ldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
           },
           {
-            "relPath": "img/splash_ldpi_new.png",
+            "relPath": "img/icon_mdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/icon_hdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/icon_xhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "img/nayoosplash_ldpi.png",
             "density": "ldpi",
             "height": 426,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splash_hdpi.png",
+            "relPath": "img/nayoosplash_mdpi.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/nayoosplash_hdpi.png",
             "density": "hdpi",
             "height": 640,
             "width": 480,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splash_xhdpi.png",
+            "relPath": "img/nayoosplash_xhdpi.png",
             "density": "xhdpi",
             "height": 960,
             "width": 720,
@@ -92,8 +117,8 @@
         "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "11",
         "appVersion_": "0.0.1",
-        "appDescription_": "Universal init code for Intel XDK and Cordova device ready detection.",
-        "appAuthor_": "Intel XDK",
+        "appDescription_": "Village security solutions.",
+        "appAuthor_": "Smart Group",
         "appVersionCode_": "1"
       },
       "Android": {
@@ -107,14 +132,39 @@
           "Fullscreen": true
         },
         "isActive_": true,
-        "appName_": "Nayoo_Mobile",
+        "appName_": "Nayoo",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
             "origin": "*"
           }
         ],
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "img/icon_ldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/icon_mdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/icon_hdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/icon_xhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
         "splashes_": [
           {
             "relPath": "img/splash_ldpi_new.png",
@@ -151,8 +201,8 @@
         "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "11",
         "appVersion_": "0.0.1",
-        "appDescription_": "Universal init code for Intel XDK and Cordova device ready detection.",
-        "appAuthor_": "Intel XDK",
+        "appDescription_": "Village security solutions.",
+        "appAuthor_": "Smart Group",
         "appVersionCode_": "1"
       },
       "iOS": {
@@ -163,7 +213,7 @@
           "ios-target": "6",
           "ios-configuration": "adhoc"
         },
-        "isActive_": true,
+        "isActive_": false,
         "appName_": "Nayoo_Mobile",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
@@ -190,7 +240,7 @@
           "windows-publisher-display-name": "",
           "windows-publisher-id": ""
         },
-        "isActive_": true,
+        "isActive_": false,
         "appName_": "Nayoo_Mobile",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [

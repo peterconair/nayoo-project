@@ -4,11 +4,15 @@
 <!--To change the contents of this file, see the documentation on the intelxdk.config.additions.xml file.-->
 <intelxdk:version value="1.0"/>
 <intelxdk:cordova-cli version="4.1.2"/>
-<name>Nayoo_Mobile</name>
-<description>Universal init code for Intel XDK and Cordova device ready detection.</description>
-<author>Intel XDK</author>
+<name>Nayoo</name>
+<description>Village security solutions.</description>
+<author>Smart Group</author>
 <content src="index.html"/>
 <access origin="*"/>
+<icon platform="android" src="img/icon_ldpi.png" density="ldpi" width="36" height="36"/>
+<icon platform="android" src="img/icon_mdpi.png" density="mdpi" width="48" height="48"/>
+<icon platform="android" src="img/icon_hdpi.png" density="hdpi" width="72" height="72"/>
+<icon platform="android" src="img/icon_xhdpi.png" density="xhdpi" width="96" height="96"/>
 <splash platform="android" src="img/splash_ldpi_new.png" density="ldpi" width="320" height="426" orientation="portrait"/>
 <splash platform="android" src="img/splash_mdpi.png" density="mdpi" width="320" height="470" orientation="portrait"/>
 <splash platform="android" src="img/splash_hdpi.png" density="hdpi" width="480" height="640" orientation="portrait"/>
