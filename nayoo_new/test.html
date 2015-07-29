@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignalR Simple Chat</title>
+
+  <script src="libs/signalr/jquery-1.10.2.min.js"></script>
+ <script src="libs/signalr/jquery.signalR-2.2.0.min.js"></script>
+
+    
+<script src="http://127.0.0.1/NayooAPIs/signalr/hubs"></script>
+<script type="text/javascript">
+    $(function () {
+        var connection = $.connection('http://127.0.0.1/NayooAPIs/signalr/hubs');
+
+		 var chatHub = $.connection.chatHub;
+
+          //chatHub.server.connect('http://127.0.0.1/NayooAPIs/signalr/hubs');
+
+
+            registerClientMethods(chatHub);
+
+            // Start Hub
+            $.connection.hub.start().done(function () {
+
+                //registerEvents(chatHub)
+
+            });
+
+
+    });
+
+		var companyCode = "admin";
+		var userName = "toeytez";
+	
+        function registerClientMethods(chatHub) {
+
+            // Calls when user successfully logged in
+            chatHub.client.onConnected = function (id, userName, companyCode, allUsers, messages) {
+				console.log(userName);
+            }
+
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, name, companyCode) {
+				console.log(name);
+            }
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (id, userName, companyCode) {
+				console.log(name);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, companyCode, message) {
+               // var MycompanyCode = $('#hdCompanyCode').val();
+			   console.log(companyCode);
+			   console.log($("#test").html());
+				var intCount = parseInt($("#test").html());
+
+				
+			   $("#test").html(intCount+1);
+
+            }
+
+            chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message) {
+				console.log(message);
+
+            }
+
+        }
+
+
+
+</script>
+
+</head>
+ 
+<body>
+<div id="test">
+0
+</div>
+    <div>
+        <ul id="messages"></ul>
+        <input type="text" id="dataToSend" />
+        <input id="broadcast" type="button" value="Send" />
+    </div>
+</body>
+</html>
+
+   
