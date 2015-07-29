@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NayooDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="house_member">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="houseId" Type="Int32" />
+    <Property Name="houseUniqueId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="userUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="houseMemberUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="med_image">
+    <Key>
+      <PropertyRef Name="imageId" />
+    </Key>
+    <Property Name="imageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="imageUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imageMappedId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="size" Type="Int32" />
+  </EntityType>
+  <EntityType Name="med_video">
+    <Key>
+      <PropertyRef Name="videoId" />
+    </Key>
+    <Property Name="videoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="vedioUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vedioMappedId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="size" Type="Int32" />
+  </EntityType>
+  <EntityType Name="mst_contact">
+    <Key>
+      <PropertyRef Name="contactId" />
+    </Key>
+    <Property Name="contactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="locationId" Type="Int32" />
+    <Property Name="locationUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="type" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+    <Property Name="contactUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_document">
+    <Key>
+      <PropertyRef Name="documentId" />
+    </Key>
+    <Property Name="documentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="documentUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="documentMappedId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mst_house">
+    <Key>
+      <PropertyRef Name="houseId" />
+    </Key>
+    <Property Name="houseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="houseCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="orgId" Type="Int32" Nullable="false" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="locationId" Type="Int32" Nullable="false" />
+    <Property Name="locationUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="villageId" Type="Int32" Nullable="false" />
+    <Property Name="villageUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mapId" Type="Int32" Nullable="false" />
+    <Property Name="mapUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="documentId" Type="Int32" Nullable="false" />
+    <Property Name="documentUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="specId" Type="Int32" Nullable="false" />
+    <Property Name="specUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="houseUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="houseMappedId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mst_layout">
+    <Key>
+      <PropertyRef Name="layoutId" />
+    </Key>
+    <Property Name="layoutId" Type="Int32" Nullable="false" />
+    <Property Name="layoutUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="zone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="villageId" Type="Int32" />
+    <Property Name="villageUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mst_location">
+    <Key>
+      <PropertyRef Name="locationId" />
+    </Key>
+    <Property Name="locationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="locationCode" Type="Int32" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="subArea" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="province" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="zipCode" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="locationUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_map">
+    <Key>
+      <PropertyRef Name="mapId" />
+    </Key>
+    <Property Name="mapId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="latitud" Type="Int32" />
+    <Property Name="longtitud" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="mapUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_organization">
+    <Key>
+      <PropertyRef Name="orgId" />
+    </Key>
+    <Property Name="orgId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_spec">
+    <Key>
+      <PropertyRef Name="specId" />
+    </Key>
+    <Property Name="specId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="Int32" />
+    <Property Name="usedArea" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="specUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_user">
+    <Key>
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="memberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="firstName_Th" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName_Th" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="firstName_En" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName_En" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sex" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idCardNo" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="birthDate" Type="DateTime" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cellPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="homePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imageId" Type="Int32" Nullable="false" />
+    <Property Name="imageUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="houseId" Type="Int32" />
+    <Property Name="houseUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="orgId" Type="Int32" Nullable="false" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userRole" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="memberUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_village">
+    <Key>
+      <PropertyRef Name="villageId" />
+    </Key>
+    <Property Name="villageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="villageCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="houseAmount" Type="Int32" />
+    <Property Name="orgId" Type="Int32" Nullable="false" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="locationId" Type="Int32" Nullable="false" />
+    <Property Name="locationUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mapId" Type="Int32" Nullable="false" />
+    <Property Name="mapUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="villageUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="opt_guest_record">
+    <Key>
+      <PropertyRef Name="recordId" />
+    </Key>
+    <Property Name="recordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="carLicenseNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="houseNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="houseUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="remark" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="orgId" Type="Int32" Nullable="false" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="recordUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="inDate" Type="DateTime" />
+    <Property Name="outDate" Type="DateTime" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="opt_inbox_message">
+    <Key>
+      <PropertyRef Name="messageId" />
+    </Key>
+    <Property Name="messageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sentDate" Type="DateTime" Nullable="false" />
+    <Property Name="sentFrom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sentTo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="readDate" Type="DateTime" Nullable="false" />
+    <Property Name="orgId" Type="Int32" Nullable="false" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="opt_taxi_call">
+    <Key>
+      <PropertyRef Name="callId" />
+    </Key>
+    <Property Name="callId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="houseNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="houseUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="carLicenseNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="originPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="destinationPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="callDate" Type="DateTime" Nullable="false" />
+    <Property Name="readDate" Type="DateTime" Nullable="false" />
+    <Property Name="orgId" Type="Int32" Nullable="false" />
+    <Property Name="orgUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+    <Property Name="createdBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" />
+    <Property Name="updatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="updatedDate" Type="DateTime" />
+    <Property Name="callUniqueId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="NayooDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="house_member" EntityType="Self.house_member" />
+    <EntitySet Name="med_image" EntityType="Self.med_image" />
+    <EntitySet Name="med_video" EntityType="Self.med_video" />
+    <EntitySet Name="mst_contact" EntityType="Self.mst_contact" />
+    <EntitySet Name="mst_document" EntityType="Self.mst_document" />
+    <EntitySet Name="mst_house" EntityType="Self.mst_house" />
+    <EntitySet Name="mst_layout" EntityType="Self.mst_layout" />
+    <EntitySet Name="mst_location" EntityType="Self.mst_location" />
+    <EntitySet Name="mst_map" EntityType="Self.mst_map" />
+    <EntitySet Name="mst_organization" EntityType="Self.mst_organization" />
+    <EntitySet Name="mst_spec" EntityType="Self.mst_spec" />
+    <EntitySet Name="mst_user" EntityType="Self.mst_user" />
+    <EntitySet Name="mst_village" EntityType="Self.mst_village" />
+    <EntitySet Name="opt_guest_record" EntityType="Self.opt_guest_record" />
+    <EntitySet Name="opt_inbox_message" EntityType="Self.opt_inbox_message" />
+    <EntitySet Name="opt_taxi_call" EntityType="Self.opt_taxi_call" />
+  </EntityContainer>
+</Schema>

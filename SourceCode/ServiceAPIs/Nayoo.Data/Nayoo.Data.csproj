@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05D81E75-EF1E-454F-B42D-7EA99FCD0C3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nayoo.Data</RootNamespace>
+    <AssemblyName>Nayoo.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.Entity.6.9.7\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassHelper\Member.cs" />
+    <Compile Include="house_member.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="med_image.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="med_video.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_contact.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_document.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_house.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_layout.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_location.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_map.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_organization.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_spec.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_user.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mst_village.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NayooModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NayooModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NayooModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NayooModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NayooModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="opt_guest_record.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="opt_inbox_message.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="opt_taxi_call.cs">
+      <DependentUpon>NayooModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EntityDeploy Include="NayooModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NayooModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NayooModel.edmx.diagram">
+      <DependentUpon>NayooModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NayooModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NayooModel.edmx</DependentUpon>
+      <LastGenOutput>NayooModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NayooModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NayooModel.edmx</DependentUpon>
+      <LastGenOutput>NayooModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\Nayoo.Data.dll.config
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\Nayoo.Data.dll
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\Nayoo.Data.pdb
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\EntityFramework.dll
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\EntityFramework.SqlServer.dll
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\MySql.Data.dll
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\MySql.Data.Entity.EF6.dll
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\EntityFramework.xml
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\bin\Release\EntityFramework.SqlServer.xml
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\obj\Release\Nayoo.Data.csprojResolveAssemblyReference.cache
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\obj\Release\Nayoo.Data.dll
+E:\Startup\Nayoo_Resources\trunk\SourceCode\ServiceAPIs\Nayoo.Data\obj\Release\Nayoo.Data.pdb

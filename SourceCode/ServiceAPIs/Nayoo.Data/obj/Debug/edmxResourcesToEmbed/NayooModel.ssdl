@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NayooDbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="house_member">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="houseId" Type="int" />
+    <Property Name="houseUniqueId" Type="varchar" MaxLength="45" />
+    <Property Name="userId" Type="int" />
+    <Property Name="userUniqueId" Type="varchar" MaxLength="30" />
+    <Property Name="createdBy" Type="varchar" MaxLength="45" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="houseMemberUniqueId" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="med_image">
+    <Key>
+      <PropertyRef Name="imageId" />
+    </Key>
+    <Property Name="imageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="path" Type="varchar" MaxLength="300" />
+    <Property Name="content" Type="varchar" MaxLength="500" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="imageUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="imageMappedId" Type="varchar" MaxLength="30" />
+    <Property Name="size" Type="int" />
+  </EntityType>
+  <EntityType Name="med_video">
+    <Key>
+      <PropertyRef Name="videoId" />
+    </Key>
+    <Property Name="videoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="path" Type="varchar" MaxLength="300" />
+    <Property Name="content" Type="varchar" MaxLength="500" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="vedioUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="vedioMappedId" Type="varchar" MaxLength="30" />
+    <Property Name="size" Type="int" />
+  </EntityType>
+  <EntityType Name="mst_contact">
+    <Key>
+      <PropertyRef Name="contactId" />
+    </Key>
+    <Property Name="contactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="address1" Type="varchar" MaxLength="100" />
+    <Property Name="address2" Type="varchar" MaxLength="100" />
+    <Property Name="locationId" Type="int" />
+    <Property Name="locationUniqueId" Type="varchar" MaxLength="30" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="type" Type="enum" />
+    <Property Name="contactUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_document">
+    <Key>
+      <PropertyRef Name="documentId" />
+    </Key>
+    <Property Name="documentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="documentUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="path" Type="varchar" MaxLength="300" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="documentMappedId" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="mst_house">
+    <Key>
+      <PropertyRef Name="houseId" />
+    </Key>
+    <Property Name="houseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="houseCode" Type="varchar" MaxLength="20" />
+    <Property Name="orgId" Type="int" Nullable="false" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="locationId" Type="int" Nullable="false" />
+    <Property Name="locationUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="villageId" Type="int" Nullable="false" />
+    <Property Name="villageUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="mapId" Type="int" Nullable="false" />
+    <Property Name="mapUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="documentId" Type="int" Nullable="false" />
+    <Property Name="documentUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="specId" Type="int" Nullable="false" />
+    <Property Name="specUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="houseUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="houseMappedId" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="mst_layout">
+    <Key>
+      <PropertyRef Name="layoutId" />
+    </Key>
+    <Property Name="layoutId" Type="int" Nullable="false" />
+    <Property Name="layoutUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="path" Type="varchar" MaxLength="300" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="zone" Type="varchar" MaxLength="45" />
+    <Property Name="villageId" Type="int" />
+    <Property Name="villageUniqueId" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="mst_location">
+    <Key>
+      <PropertyRef Name="locationId" />
+    </Key>
+    <Property Name="locationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="locationCode" Type="int" />
+    <Property Name="area" Type="varchar" MaxLength="100" />
+    <Property Name="subArea" Type="varchar" MaxLength="100" />
+    <Property Name="province" Type="varchar" MaxLength="100" />
+    <Property Name="zipCode" Type="int" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="locationUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_map">
+    <Key>
+      <PropertyRef Name="mapId" />
+    </Key>
+    <Property Name="mapId" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="path" Type="varchar" MaxLength="300" />
+    <Property Name="latitud" Type="int" />
+    <Property Name="longtitud" Type="int" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="mapUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_organization">
+    <Key>
+      <PropertyRef Name="orgId" />
+    </Key>
+    <Property Name="orgId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_spec">
+    <Key>
+      <PropertyRef Name="specId" />
+    </Key>
+    <Property Name="specId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="area" Type="int" />
+    <Property Name="usedArea" Type="int" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="specUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_user">
+    <Key>
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="memberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="firstName_Th" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastName_Th" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="firstName_En" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastName_En" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sex" Type="enum" Nullable="false" />
+    <Property Name="idCardNo" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="birthDate" Type="date" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cellPhone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="homePhone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="imageId" Type="int" Nullable="false" />
+    <Property Name="imageUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="houseId" Type="int" />
+    <Property Name="houseUniqueId" Type="varchar" MaxLength="30" />
+    <Property Name="orgId" Type="int" Nullable="false" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userRole" Type="enum" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="memberUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mst_village">
+    <Key>
+      <PropertyRef Name="villageId" />
+    </Key>
+    <Property Name="villageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="villageCode" Type="varchar" MaxLength="20" />
+    <Property Name="houseAmount" Type="int" />
+    <Property Name="orgId" Type="int" Nullable="false" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="locationId" Type="int" Nullable="false" />
+    <Property Name="locationUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="mapId" Type="int" Nullable="false" />
+    <Property Name="mapUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="villageUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="opt_guest_record">
+    <Key>
+      <PropertyRef Name="recordId" />
+    </Key>
+    <Property Name="recordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="carLicenseNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="houseNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="houseUniqueId" Type="varchar" MaxLength="30" />
+    <Property Name="remark" Type="varchar" MaxLength="250" />
+    <Property Name="orgId" Type="int" Nullable="false" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="recordUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="inDate" Type="datetime" Precision="0" />
+    <Property Name="outDate" Type="datetime" Precision="0" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="opt_inbox_message">
+    <Key>
+      <PropertyRef Name="messageId" />
+    </Key>
+    <Property Name="messageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="content" Type="text" Nullable="false" />
+    <Property Name="sentDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="sentFrom" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="sentTo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="readDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="orgId" Type="int" Nullable="false" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="status" Type="enum" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="opt_taxi_call">
+    <Key>
+      <PropertyRef Name="callId" />
+    </Key>
+    <Property Name="callId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="houseNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="houseUniqueId" Type="varchar" MaxLength="30" />
+    <Property Name="carLicenseNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="originPlace" Type="varchar" MaxLength="50" />
+    <Property Name="destinationPlace" Type="varchar" MaxLength="50" />
+    <Property Name="callDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="readDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="orgId" Type="int" Nullable="false" />
+    <Property Name="orgUniqueId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="status" Type="enum" />
+    <Property Name="createdBy" Type="varchar" MaxLength="30" />
+    <Property Name="createdDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="callUniqueId" Type="varchar" MaxLength="30" />
+    <Property Name="description" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityContainer Name="NayooDbModelStoreContainer">
+    <EntitySet Name="house_member" EntityType="Self.house_member" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="med_image" EntityType="Self.med_image" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="med_video" EntityType="Self.med_video" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_contact" EntityType="Self.mst_contact" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_document" EntityType="Self.mst_document" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_house" EntityType="Self.mst_house" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_layout" EntityType="Self.mst_layout" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_location" EntityType="Self.mst_location" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_map" EntityType="Self.mst_map" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_organization" EntityType="Self.mst_organization" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_spec" EntityType="Self.mst_spec" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_user" EntityType="Self.mst_user" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="mst_village" EntityType="Self.mst_village" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="opt_guest_record" EntityType="Self.opt_guest_record" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="opt_inbox_message" EntityType="Self.opt_inbox_message" Schema="nayoodb" store:Type="Tables" />
+    <EntitySet Name="opt_taxi_call" EntityType="Self.opt_taxi_call" Schema="nayoodb" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

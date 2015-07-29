@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NayooDbModelStoreContainer" CdmEntityContainer="NayooDbEntities">
+    <EntitySetMapping Name="house_member">
+      <EntityTypeMapping TypeName="NayooDbModel.house_member">
+        <MappingFragment StoreEntitySet="house_member">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="houseId" ColumnName="houseId" />
+          <ScalarProperty Name="houseUniqueId" ColumnName="houseUniqueId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userUniqueId" ColumnName="userUniqueId" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="houseMemberUniqueId" ColumnName="houseMemberUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="med_image">
+      <EntityTypeMapping TypeName="NayooDbModel.med_image">
+        <MappingFragment StoreEntitySet="med_image">
+          <ScalarProperty Name="imageId" ColumnName="imageId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="imageUniqueId" ColumnName="imageUniqueId" />
+          <ScalarProperty Name="imageMappedId" ColumnName="imageMappedId" />
+          <ScalarProperty Name="size" ColumnName="size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="med_video">
+      <EntityTypeMapping TypeName="NayooDbModel.med_video">
+        <MappingFragment StoreEntitySet="med_video">
+          <ScalarProperty Name="videoId" ColumnName="videoId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="vedioUniqueId" ColumnName="vedioUniqueId" />
+          <ScalarProperty Name="vedioMappedId" ColumnName="vedioMappedId" />
+          <ScalarProperty Name="size" ColumnName="size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_contact">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_contact">
+        <MappingFragment StoreEntitySet="mst_contact">
+          <ScalarProperty Name="contactId" ColumnName="contactId" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="locationUniqueId" ColumnName="locationUniqueId" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="contactUniqueId" ColumnName="contactUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_document">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_document">
+        <MappingFragment StoreEntitySet="mst_document">
+          <ScalarProperty Name="documentId" ColumnName="documentId" />
+          <ScalarProperty Name="documentUniqueId" ColumnName="documentUniqueId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="documentMappedId" ColumnName="documentMappedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_house">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_house">
+        <MappingFragment StoreEntitySet="mst_house">
+          <ScalarProperty Name="houseId" ColumnName="houseId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="houseCode" ColumnName="houseCode" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="locationUniqueId" ColumnName="locationUniqueId" />
+          <ScalarProperty Name="villageId" ColumnName="villageId" />
+          <ScalarProperty Name="villageUniqueId" ColumnName="villageUniqueId" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="mapUniqueId" ColumnName="mapUniqueId" />
+          <ScalarProperty Name="documentId" ColumnName="documentId" />
+          <ScalarProperty Name="documentUniqueId" ColumnName="documentUniqueId" />
+          <ScalarProperty Name="specId" ColumnName="specId" />
+          <ScalarProperty Name="specUniqueId" ColumnName="specUniqueId" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="houseUniqueId" ColumnName="houseUniqueId" />
+          <ScalarProperty Name="houseMappedId" ColumnName="houseMappedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_layout">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_layout">
+        <MappingFragment StoreEntitySet="mst_layout">
+          <ScalarProperty Name="layoutId" ColumnName="layoutId" />
+          <ScalarProperty Name="layoutUniqueId" ColumnName="layoutUniqueId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="zone" ColumnName="zone" />
+          <ScalarProperty Name="villageId" ColumnName="villageId" />
+          <ScalarProperty Name="villageUniqueId" ColumnName="villageUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_location">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_location">
+        <MappingFragment StoreEntitySet="mst_location">
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="locationCode" ColumnName="locationCode" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="subArea" ColumnName="subArea" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="locationUniqueId" ColumnName="locationUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_map">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_map">
+        <MappingFragment StoreEntitySet="mst_map">
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="latitud" ColumnName="latitud" />
+          <ScalarProperty Name="longtitud" ColumnName="longtitud" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="mapUniqueId" ColumnName="mapUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_organization">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_organization">
+        <MappingFragment StoreEntitySet="mst_organization">
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_spec">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_spec">
+        <MappingFragment StoreEntitySet="mst_spec">
+          <ScalarProperty Name="specId" ColumnName="specId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="usedArea" ColumnName="usedArea" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="specUniqueId" ColumnName="specUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_user">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_user">
+        <MappingFragment StoreEntitySet="mst_user">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="firstName_Th" ColumnName="firstName_Th" />
+          <ScalarProperty Name="lastName_Th" ColumnName="lastName_Th" />
+          <ScalarProperty Name="firstName_En" ColumnName="firstName_En" />
+          <ScalarProperty Name="lastName_En" ColumnName="lastName_En" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="idCardNo" ColumnName="idCardNo" />
+          <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="cellPhone" ColumnName="cellPhone" />
+          <ScalarProperty Name="homePhone" ColumnName="homePhone" />
+          <ScalarProperty Name="imageId" ColumnName="imageId" />
+          <ScalarProperty Name="imageUniqueId" ColumnName="imageUniqueId" />
+          <ScalarProperty Name="houseId" ColumnName="houseId" />
+          <ScalarProperty Name="houseUniqueId" ColumnName="houseUniqueId" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+          <ScalarProperty Name="userRole" ColumnName="userRole" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="memberUniqueId" ColumnName="memberUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mst_village">
+      <EntityTypeMapping TypeName="NayooDbModel.mst_village">
+        <MappingFragment StoreEntitySet="mst_village">
+          <ScalarProperty Name="villageId" ColumnName="villageId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="villageCode" ColumnName="villageCode" />
+          <ScalarProperty Name="houseAmount" ColumnName="houseAmount" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="locationUniqueId" ColumnName="locationUniqueId" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="mapUniqueId" ColumnName="mapUniqueId" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="villageUniqueId" ColumnName="villageUniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="opt_guest_record">
+      <EntityTypeMapping TypeName="NayooDbModel.opt_guest_record">
+        <MappingFragment StoreEntitySet="opt_guest_record">
+          <ScalarProperty Name="recordId" ColumnName="recordId" />
+          <ScalarProperty Name="carLicenseNo" ColumnName="carLicenseNo" />
+          <ScalarProperty Name="houseNo" ColumnName="houseNo" />
+          <ScalarProperty Name="houseUniqueId" ColumnName="houseUniqueId" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="recordUniqueId" ColumnName="recordUniqueId" />
+          <ScalarProperty Name="inDate" ColumnName="inDate" />
+          <ScalarProperty Name="outDate" ColumnName="outDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="opt_inbox_message">
+      <EntityTypeMapping TypeName="NayooDbModel.opt_inbox_message">
+        <MappingFragment StoreEntitySet="opt_inbox_message">
+          <ScalarProperty Name="messageId" ColumnName="messageId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="sentDate" ColumnName="sentDate" />
+          <ScalarProperty Name="sentFrom" ColumnName="sentFrom" />
+          <ScalarProperty Name="sentTo" ColumnName="sentTo" />
+          <ScalarProperty Name="readDate" ColumnName="readDate" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="opt_taxi_call">
+      <EntityTypeMapping TypeName="NayooDbModel.opt_taxi_call">
+        <MappingFragment StoreEntitySet="opt_taxi_call">
+          <ScalarProperty Name="callId" ColumnName="callId" />
+          <ScalarProperty Name="houseNo" ColumnName="houseNo" />
+          <ScalarProperty Name="houseUniqueId" ColumnName="houseUniqueId" />
+          <ScalarProperty Name="carLicenseNo" ColumnName="carLicenseNo" />
+          <ScalarProperty Name="originPlace" ColumnName="originPlace" />
+          <ScalarProperty Name="destinationPlace" ColumnName="destinationPlace" />
+          <ScalarProperty Name="callDate" ColumnName="callDate" />
+          <ScalarProperty Name="readDate" ColumnName="readDate" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="orgUniqueId" ColumnName="orgUniqueId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="callUniqueId" ColumnName="callUniqueId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
