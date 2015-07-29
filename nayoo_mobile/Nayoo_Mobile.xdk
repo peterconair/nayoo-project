@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "890ef542-3efa-43a1-87b0-ae64ae0addcf",
-      "lastModifiedDate": 1438153695154,
+      "lastModifiedDate": 1438166572490,
       "creationDate": 1438153695069
     },
     "XDK-app-designer": "false",
@@ -44,7 +44,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "Nayoo_Mobile",
@@ -55,7 +56,36 @@
           }
         ],
         "icons_": [],
-        "splashes_": [],
+        "splashes_": [
+          {
+            "relPath": "img/splash_mdpi.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splash_ldpi_new.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splash_hdpi.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splash_xhdpi.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
@@ -73,7 +103,8 @@
         "preferences_": {
           "android-minSdkVersion": "10",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "Nayoo_Mobile",
@@ -84,7 +115,36 @@
           }
         ],
         "icons_": [],
-        "splashes_": [],
+        "splashes_": [
+          {
+            "relPath": "img/splash_ldpi_new.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splash_mdpi.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splash_hdpi.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splash_xhdpi.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
