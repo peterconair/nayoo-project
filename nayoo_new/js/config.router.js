@@ -5,7 +5,7 @@
  */
 angular.module('app')
   .run(
-    [          '$rootScope', '$state', '$stateParams',
+    [ '$rootScope', '$state', '$stateParams',
       function ($rootScope,   $state,   $stateParams) {
           $rootScope.$state = $state;
           $rootScope.$stateParams = $stateParams;        
@@ -13,7 +13,7 @@ angular.module('app')
     ]
   )
   .config(
-    [          '$stateProvider', '$urlRouterProvider', 'JQ_CONFIG', 'MODULE_CONFIG', 
+    ['$stateProvider', '$urlRouterProvider', 'JQ_CONFIG', 'MODULE_CONFIG', 
       function ($stateProvider,   $urlRouterProvider, JQ_CONFIG, MODULE_CONFIG) {
           var layout = "tpl/app.html";
           if(window.location.href.indexOf("material") > 0){

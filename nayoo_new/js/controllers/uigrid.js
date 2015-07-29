@@ -1,6 +1,8 @@
 app.controller('UiGridDemoCtrl', ['$scope', 'uiGridConstants', function($scope, uiGridConstants) {
     $scope.gridOptionsSimple = {
         rowHeight: 36,
+         paginationPageSizes: [25, 50, 75],
+    paginationPageSize: 25,
         data: [
           {
               "name": "Ethel Price",
