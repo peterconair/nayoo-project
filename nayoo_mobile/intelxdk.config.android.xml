@@ -13,10 +13,10 @@
 <icon platform="android" src="img/icon_mdpi.png" density="mdpi" width="48" height="48"/>
 <icon platform="android" src="img/icon_hdpi.png" density="hdpi" width="72" height="72"/>
 <icon platform="android" src="img/icon_xhdpi.png" density="xhdpi" width="96" height="96"/>
-<splash platform="android" src="img/splash_ldpi_new.png" density="ldpi" width="320" height="426" orientation="portrait"/>
-<splash platform="android" src="img/splash_mdpi.png" density="mdpi" width="320" height="470" orientation="portrait"/>
-<splash platform="android" src="img/splash_hdpi.png" density="hdpi" width="480" height="640" orientation="portrait"/>
-<splash platform="android" src="img/splash_xhdpi.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
+<splash platform="android" src="img/nayoosplash_ldpi.png" density="ldpi" width="320" height="426" orientation="portrait"/>
+<splash platform="android" src="img/nayoosplash_mdpi.png" density="mdpi" width="320" height="470" orientation="portrait"/>
+<splash platform="android" src="img/nayoosplash_hdpi.png" density="hdpi" width="480" height="640" orientation="portrait"/>
+<splash platform="android" src="img/nayoosplash_xhdpi.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
 <intelxdk:plugin intelxdk:name="Device" intelxdk:value="org.apache.cordova.device" intelxdk:version="0.2.13"/>
 <intelxdk:plugin intelxdk:name="SplashScreen" intelxdk:value="org.apache.cordova.splashscreen" intelxdk:version="0.3.5"/>
 <preference name="android-minSdkVersion" value="10"/>

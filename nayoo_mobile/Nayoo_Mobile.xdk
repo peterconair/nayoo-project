@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "890ef542-3efa-43a1-87b0-ae64ae0addcf",
-      "lastModifiedDate": 1438178555627,
+      "lastModifiedDate": 1438178606867,
       "creationDate": 1438153695069
     },
     "XDK-app-designer": "false",
@@ -167,28 +167,28 @@
         ],
         "splashes_": [
           {
-            "relPath": "img/splash_ldpi_new.png",
+            "relPath": "img/nayoosplash_ldpi.png",
             "density": "ldpi",
             "height": 426,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splash_mdpi.png",
+            "relPath": "img/nayoosplash_mdpi.png",
             "density": "mdpi",
             "height": 470,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splash_hdpi.png",
+            "relPath": "img/nayoosplash_hdpi.png",
             "density": "hdpi",
             "height": 640,
             "width": 480,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splash_xhdpi.png",
+            "relPath": "img/nayoosplash_xhdpi.png",
             "density": "xhdpi",
             "height": 960,
             "width": 720,
