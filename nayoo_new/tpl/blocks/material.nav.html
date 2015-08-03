@@ -1,39 +1,97 @@
 <!-- list -->
 <ul class="nav">
-  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-    <span translate="aside.nav.HEADER">Navigation</span>
-  </li>
-  <li>
-    <a ui-sref="app.dashboard-v3" md-ink-ripple class="auto">
-      <i class="glyphicon glyphicon-stats icon"></i>
-      <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
-    </a>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="app.calendar" md-ink-ripple>
-      <i class="glyphicon glyphicon-calendar icon"></i>
-      <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
-    </a>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="app.mail.list" md-ink-ripple>
-      <b class="badge bg-info pull-right">9</b>
-      <i class="glyphicon glyphicon-envelope icon"></i>
-      <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
-    </a>
-  </li>
-   <li ui-sref-active="active">
-    <a ui-sref="app.guestrecord" md-ink-ripple>
-      <i class="glyphicon glyphicon-briefcase icon"></i>
-      <span class="font-bold">Guest Record</span>
-    </a>
-  </li>
-   <li ui-sref-active="active">
-    <a ui-sref="app.calltaxi" md-ink-ripple>
-      <i class="glyphicon glyphicon-edit icon"></i>
-      <span class="font-bold">Call Taxi</span>
-    </a>
-  </li>
-  
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span translate="aside.nav.HEADER">Navigation</span>
+    </li>
+    <li>
+        <a ui-sref="app.dashboard-v3" md-ink-ripple class="auto">
+            <i class="glyphicon glyphicon-stats icon"></i>
+            <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.calendar" md-ink-ripple>
+            <i class="glyphicon glyphicon-calendar icon"></i>
+            <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.mail.list" md-ink-ripple>
+            <b class="badge bg-info pull-right">9</b>
+            <i class="glyphicon glyphicon-envelope icon"></i>
+            <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.guestrecord" md-ink-ripple>
+            <i class="glyphicon glyphicon-briefcase icon"></i>
+            <span class="font-bold">Guest Record</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.calltaxi" md-ink-ripple>
+            <i class="glyphicon glyphicon-edit icon"></i>
+            <span class="font-bold">Call Taxi</span>
+        </a>
+    </li>
+
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href md-ink-ripple class="auto">
+            <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-list"></i>
+            <span class="font-bold" translate="aside.nav.master.MASTER">Master</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li  ui-sref-active="active">
+                <a  ui-sref="app.master.contact">
+                    <span translate="aside.nav.master.CONTACT">Contact</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.document">
+                    <span translate="aside.nav.master.DOCUMENT">Document</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.house">
+                    <span translate="aside.nav.master.HOUSE">House</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.layout">
+                    <span translate="aside.nav.master.LAYOUT">Layout</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.map">
+                    <span>Map</span>
+                </a>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.villag">
+                    <span>Villag</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.organization">
+                    <span>Organization</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.spec">
+                    <span>Spec</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.user">
+                    <span>User</span>
+                </a>
+            </li>
+        </ul>
+    </li>
 </ul>
 <!-- / list -->
