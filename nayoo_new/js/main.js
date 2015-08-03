@@ -12,7 +12,7 @@ angular.module('app')
 
       // config
       $scope.app = {
-        name: 'Angulr',
+        name: 'Nayoo',
         version: '2.0.3',
         // for chart colors
         color: {

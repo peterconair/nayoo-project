@@ -7,7 +7,7 @@
 }</style>
 
 
-<div ng-controller="MailListCtrl">
+<div ng-controller="GuestRecordCtrl">
     <div class="bg-light lter b-b wrapper-md">
         <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
             <i class="fa fa-plus"></i> Add
@@ -17,10 +17,10 @@
 	
     <div class="hbox hbox-auto-xs hbox-auto-sm">
         <div class="wrapper-md">
-            <div class="panel panel-default" ng-controller="MailListCtrl">
+            <div class="panel panel-default" ng-controller="GuestRecordCtrl">
                 <!-- list -->
                 <ul class="list-group list-group-lg no-radius m-b-none m-t-n-xxs">
-                    <li ng-repeat="mail in mails | filter:fold" ng-class="labelClass(mail.label)" class="list-group-item clearfix b-l-3x">
+                    <li ng-repeat="mail in guest_records | filter:fold" ng-class="labelClass(mail.label)" class="list-group-item clearfix b-l-3x">
                         <a ui-sref="app.page.profile" class="avatar thumb pull-left m-r">
                             <img ng-src="{{mail.avatar}}">
 						</a>
@@ -29,8 +29,9 @@
                             <i class="fa fa-paperclip ng-hide m-l-sm" ng-show="{{mail.attach}}"></i>
 						</div>
                         <div class="clear">
-                            <div><a ui-sref="app.mail.detail({mailId:mail.id})" class="text-md">{{mail.subject}}</a><span class="label bg-light m-l-sm">{{mail.label}}</span></div>
-                            <div class="text-ellipsis m-t-xs">{{mail.content | limitTo:100}}</div>
+                            <div><a ui-sref="app.mail.detail({mailId:mail.recordId})" class="text-md">บ้านเลขที่่ : {{mail.houseNo}}</a>
+                                <span class="label bg-light m-l-sm">{{mail.label}}</span></div>
+                            <div class="text-ellipsis m-t-xs">เหตุผล : {{mail.remark | limitTo:100}}</div>
 						</div>
 					</li>
 				</ul>
@@ -49,7 +50,8 @@
 								<div class="form-group">
                                 <label for="inputEmail3" class="col-sm-6 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1"  ng-model="user.Name" required>
+                                    <input type="text" class="form-control" id="txthouseNo" 
+                                           name="houseNo" tabindex="1"  ng-model="user.houseNo" required>
 								</div>
 							</div>
 							<div class="form-group">
@@ -71,7 +73,8 @@
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-6 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="txtNameEN" name="NameEN" autocomplete="off" tabindex="2" ng-model="user.NameEN">
+                                    <input type="text" class="form-control" id="txtcarLicenseNo " 
+                                           name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
 								</div>
 							</div>
 							<div class="portlet light bordered">
