@@ -1,4 +1,4 @@
-<div class="bg-light lter b-b wrapper-md">
+<!-- <div class="bg-light lter b-b wrapper-md">
   <h1 class="m-n font-thin h3">Call Taxi</h1>
 </div>
 <div class="wrapper-md">
@@ -32,3 +32,28 @@
     </div>
   </div>
 </div>
+ -->
+ 
+ <div ng-controller="ContactCtrl">
+ 
+<div class="bg-light lter b-b wrapper-md">
+<button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ng-click="ShowDlg()"   >
+    <i class="fa fa-plus"></i> Add
+</button>
+ 
+ <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            asldjlaskjdaskljdklsajdk
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script> 
+  <h1 class="m-n font-thin h3">Contacts</h1>
+</div> 
+</div>
+	
