@@ -9,10 +9,10 @@
 
 <div ng-controller="GuestRecordCtrl">
     <div class="bg-light lter b-b wrapper-md">
-        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
+        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs"  ng-click="Add()" >
             <i class="fa fa-plus"></i> Add
 		</button>
-        <h1 class="m-n font-thin h3">Guest Record</h1>
+        <h1 class="m-n font-thin h3">Guest Record {{message}}</h1>
 	</div>
 	
     <div class="hbox hbox-auto-xs hbox-auto-sm">
