@@ -4,8 +4,8 @@ function ajaxindicatorstart(text) {
     }
 
     jQuery('#resultLoading').css({
-        'width': '24px',
-        'height': '24px',
+        'width': '100%',
+        'height': '100%',
         'position': 'fixed',
         'z-index': '10000000',
         'top': '0',
@@ -16,6 +16,14 @@ function ajaxindicatorstart(text) {
     });
 
 
+    jQuery('#resultLoading .bg').css({
+        'background': '#FFFFFF',
+        'opacity': '0.7',
+        'width': '100%',
+        'height': '100%',
+        'position': 'absolute',
+        'top': '0'
+    });
 
     jQuery('#resultLoading>div:first').css({
         'width': '250px',
