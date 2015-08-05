@@ -9,10 +9,10 @@
 
 <div ng-controller="GuestRecordCtrl">
     <div class="bg-light lter b-b wrapper-md">
-        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs"  ng-click="Add()" >
+        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside" >
             <i class="fa fa-plus"></i> Add
 		</button>
-        <h1 class="m-n font-thin h3">Guest Record {{message}}</h1>
+        <h1 class="m-n font-thin h3">Guest Record</h1>
 	</div>
 	
     <div class="hbox hbox-auto-xs hbox-auto-sm">
@@ -48,21 +48,21 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="form-group">
-                                <label for="inputEmail3" class="col-sm-6 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
-                                <div class="col-sm-6">
+                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
+                                <div class="col-sm-7">
                                     <input type="text" class="form-control" id="txthouseNo" 
                                            name="houseNo" tabindex="1"  ng-model="user.houseNo" required>
 								</div>
 							</div>
 							<div class="form-group">
-                                <label for="inputEmail3" class="col-sm-6 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
-                                <div class="col-sm-6">
+                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
+                                <div class="col-sm-7">
                                     <input type="text" class="form-control" id="txtName" name="Name" tabindex="1"  ng-model="user.Name" required>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-6 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
-								<div class="col-sm-6">
+								<label class="col-sm-5 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
+								<div class="col-sm-7">
 									<select class="form-control input-sm select2me" data-placeholder="Select...">
 										<option value=""></option>
 										<option value="AL">ทวงหนี้</option>
@@ -71,8 +71,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputPassword3" class="col-sm-6 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
-                                <div class="col-sm-6">
+								<label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
+                                <div class="col-sm-7">
                                     <input type="text" class="form-control" id="txtcarLicenseNo " 
                                            name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
 								</div>
@@ -128,10 +128,10 @@
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-4 control-label"></label>
                                 <div class="col-sm-8">
-									<button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
+									<button type="button" class="btn btn-warning btn-s"  ng-click="Add()" >
 										<span class="glyphicon glyphicon-ban-circle"> Save</span> 
 									</button>
-                                    <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+                                    <button type="button" class="btn btn-danger btn-s" ui-toggle-class="show" target="#aside" >
 										<span class="glyphicon glyphicon-trash"> Clear</span> 
 									</button>
 								</div>
