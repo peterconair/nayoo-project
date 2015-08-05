@@ -1,50 +1,98 @@
-<div ng-controller="calltaxiCtrl">
- 
-  
+<style>
+    div#btnPicture {
+        text-align: right;
+        padding-right: 0px;
+    }
+    
+    .col-sm-6 {
+        padding-left: 0px;
+    }
+</style>
 
-<div class="bg-light lter b-b wrapper-md">
-<button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ng-click="ShowDlg()"   >
-    <i class="fa fa-plus"></i> Add
-</button>
- 
 
- <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title">I'm a modal!</h3>
-        </div>
-        <div class="modal-body">
-            asldjlaskjdaskljdklsajdk
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-        </div>
-    </script>
-  <h1 class="m-n font-thin h3">Call Taxi</h1>
-</div>
-<div class="wrapper-md">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      DataTables
+<div ng-controller="ContactCtrl">
+    <div class="bg-light lter b-b wrapper-md">
+        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
+            <i class="fa fa-plus"></i> Add
+        </button>
+        <h1 class="m-n font-thin h3">Call Taxi</h1>
     </div>
-    <div class="table-responsive">
-      <table ui-jq="dataTable"  class="table table-striped b-t b-b">
-        <thead>
-          <tr>
-            <th  style="width:50%">Rendering engine</th>
-            <th  style="width:50%">Browser</th> 
-          </tr>
-        </thead> 
-        <tbody>
-		 <tr ng-repeat="x in data">
-					<td>{{ x.carLicenseNo }}</td>
-					<td>{{ x.houseNo }}</td>
-				  </tr>
-        </tbody>
-      </table>
-	  {{message}}
-    </div>
-  </div>
-</div>
 
-</div>
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="wrapper-md">
+            <!-- DataTable -->
+            <div class="panel panel-default">
+
+                <div class="table-responsive">
+                    <table ui-jq="dataTable" ui-options="{
+          sAjaxSource: 'api/datatable.json',
+          aoColumns: [
+            { mData: 'engine' },
+            { mData: 'browser' },
+            { mData: 'platform' },
+            { mData: 'version' },
+            { mData: 'grade' }
+          ]
+        }" class="table table-striped b-t b-b">
+                        <thead>
+                            <tr>
+                                <th style="width:20%">Rendering engine</th>
+                                <th style="width:25%">Browser</th>
+                                <th style="width:25%">Platform(s)</th>
+                                <th style="width:15%">Engine version</th>
+                                <th style="width:15%">CSS grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /DataTable -->
+        </div>
+        <div class="col w-md w-auto-xs bg-light dk bg-auto b-l hide" id="aside">
+            <div class="bg-light lter b-b wrapper-md">
+                <h2 class="m-n font-thin h4">Add/Edit Call Taxi</h2>
+            </div>
+            <form name="newMail" class="form-horizontal m-t-lg">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txthouseNo" name="houseNo" tabindex="1" ng-model="user.houseNo" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
+                                <div class="col-sm-7">
+                                    <select class="form-control input-sm select2me" data-placeholder="Select...">
+                                        <option value=""></option>
+                                        <option value="AL">ทวงหนี้</option>
+                                        <option value="WY">หาเด็ก</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtcarLicenseNo " name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                            </div>
+                        </div>
+            </form>
+            </div>
+            </div>
+        </div>
