@@ -1,7 +1,6 @@
 app.controller('GuestRecordCtrl', ['$scope', '$http', '$stateParams',
                                    function ($scope, $http, $stateParams) {
 
-
        
                                        
         $scope.Binding = function () {
@@ -15,27 +14,29 @@ app.controller('GuestRecordCtrl', ['$scope', '$http', '$stateParams',
             });
         };
 
-        $scope.Add = function () {
-            var opt_guest_record = {
-                carLicenseNo: "33333",
-                houseNo: "123",
-                remark: "sample string 5",
-                orgId: 6,
-                orgUniqueId: "kladklajdklasjdklasjkldjskl",
+        $scope.Add = function (Guest) { 
+          var opt_guest_record = {
+                carLicenseNo:  Guest.carLicenseNo,
+                houseNo:  Guest.houseNo,
+                remark: Guest.Remark,
+                orgId:  orgId,
+                orgUniqueId: orgUniqueId,
                 createdBy: "1",
-                updatedBy: "1",
-                inDate: "2015-08-05T01:09:57.8888173+07:00",
-                outDate: "2015-08-05T01:09:57.8888173+07:00"
-            };
+                updatedBy: "1" 
+            }; 
 
             $http.post(serviceBase + "RecordGuest", opt_guest_record).success(function (result) {
-                $scope.Binding();
+                $scope.Binding(); 
+				$scope.formReset(Guest);
             }).error(function (e) {
                 $scope.message = e.Message;
-            });
-
-        }
+            }); 
+        };
         
+		$scope.formReset=function(form){
+			 angular.copy({},form);
+		};
+		
         $scope.Binding();
 
 
