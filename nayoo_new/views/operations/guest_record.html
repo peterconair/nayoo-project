@@ -1,4 +1,5 @@
 <style>
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
     div#btnPicture {
         text-align: right;
         padding-right: 0px;
@@ -6,7 +7,24 @@
     
     .col-sm-6 {
         padding-left: 0px;
-    }
+    } 
+	.boxHouseNo {    
+		-webkit-box-shadow: 0 0 1px 3px rgba(12, 175, 247, 0.2);
+		box-shadow: 0 0 1px 2px rgba(12, 175, 247, 0.2); 
+		width: 80px;
+		height: 80px;
+		border-radius: 80px;
+		-webkit-border-radius: 80px;
+		-moz-border-radius: 80px;
+		} 
+	.CssHouseNo{ 
+		font-family: 'Shadows Into Light', cursive;
+		 font-weight: 600; 
+		 font-size:1.4em;
+		 color:  #790202;
+	}
+		 
+
 </style>
 
 
@@ -23,19 +41,22 @@
             <div class="panel panel-default" >
                 <!-- list -->
                 <ul class="list-group list-group-lg no-radius m-b-none m-t-n-xxs">
-                    <li ng-repeat="mail in guest_records | filter:fold" ng-class="labelClass(mail.label)" class="list-group-item clearfix b-l-3x">
+                    <li ng-repeat="guest in guest_records | filter:fold" ng-class="labelClass(guest.label)" class="list-group-item clearfix b-l-3x">
                         <a ui-sref="app.page.profile" class="avatar thumb pull-left m-r">
-                            <img ng-src="{{mail.avatar}}">
+                         <img ng-src="img/home.png" class="boxHouseNo" />  
                         </a>
                         <div class="pull-right text-sm text-muted">
-                            <span class="hidden-xs">{{ mail.date | fromNow }}</span>
+                            <span class="hidden-xs">{{ guest.date | fromNow }}</span>
                             <i class="fa fa-paperclip ng-hide m-l-sm" ng-show="{{mail.attach}}"></i>
                         </div>
-                        <div class="clear">
-                            <div><a ui-sref="app.mail.detail({mailId:mail.recordId})" class="text-md">บ้านเลขที่่ : {{mail.houseNo}}</a>
-                                <span class="label bg-light m-l-sm">{{mail.label}}</span>
+                        <div class="clear"> 
+                            <div><a ui-sref="app.mail.detail({mailId:mail.recordId})" class="text-md CssHouseNo">House No : {{guest.houseNo}}</a> 
+                                <span class="label bg-light m-l-sm">{{guest.label}}</span>
                             </div>
-                            <div class="text-ellipsis m-t-xs">เหตุผล : {{mail.remark | limitTo:100}}</div>
+                         
+						  <div class="text-ellipsis m-t-xs">
+						    Car License : {{guest.carLicenseNo}}<br />
+						    Remark : {{guest.remark | limitTo:100}}</div>
                         </div>
                     </li>
                 </ul>
@@ -47,36 +68,31 @@
                 <h1 class="m-n font-thin h4">Add/Edit Guest Record</h1>
             </div>
 
-            <form name="newMail" class="form-horizontal m-t-lg">
+            <form name="newGuest" class="form-horizontal m-t-lg">
                 <div class="wrapper">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txthouseNo" name="houseNo" tabindex="1" ng-model="user.houseNo" required>
+                                    <input type="text" class="form-control" id="txthouseNo" name="houseNo" tabindex="1" ng-model="Guest.houseNo" required>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-5 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
-                                <div class="col-sm-7">
-                                    <select class="form-control input-sm select2me" data-placeholder="Select...">
-                                        <option value=""></option>
-                                        <option value="AL">ทวงหนี้</option>
-                                        <option value="WY">หาเด็ก</option>
-                                    </select>
-                                </div>
-                            </div>
+                            </div> 
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtcarLicenseNo " name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
+                                    <input type="text" class="form-control" id="txtcarLicenseNo " name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="Guest.carLicenseNo ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label"><span id="spnName">หมายเหตุ</span> :</label>
+                                <div class="col-sm-7">
+                                  <!--  <select class="form-control input-sm select2me" data-placeholder="Select...">
+                                        <option value=""></option>
+                                        <option value="AL">ทวงหนี้</option>
+                                        <option value="WY">หาเด็ก</option>
+                                    </select> --> 
+						          <input type="text" class="form-control" id="txtRemark " name="carRemark " autocomplete="off" tabindex="2" ng-model="Guest.Remark ">
                                 </div>
                             </div>
                             <div class="portlet light bordered">
@@ -128,7 +144,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-primary" ng-click="Add()">OK</button>
+                                <button class="btn btn-primary" ng-click="Add(Guest)">OK</button>
                                 <button class="btn btn-warning" ui-toggle-class="show" target="#aside">Cancel</button>
                             </div>
                         </div>
