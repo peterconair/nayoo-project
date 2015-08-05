@@ -120,7 +120,6 @@
                                                         <span ng-show="item.isCancel" class="text-info"><i class="glyphicon glyphicon-ban-circle"></i></span>
                                                         <span ng-show="item.isError" class="text-danger"><i class="glyphicon glyphicon-remove"></i></span>
                                                     </td>
-
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -128,19 +127,14 @@
 
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-4 control-label"></label>
-                                <div class="col-sm-8">
-                                    <button type="button" class="btn btn-warning btn-s" ng-click="Add()">
-                                        <span class="glyphicon glyphicon-ban-circle"> Save</span>
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-s" ui-toggle-class="show" target="#aside">
-                                        <span class="glyphicon glyphicon-trash"> Clear</span>
-                                    </button>
-                                </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
                             </div>
                         </div>
+                    </div>
+                </div>
             </form>
-            </div>
-            </div>
         </div>
+    </div>
+</div>
