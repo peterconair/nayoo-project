@@ -12,18 +12,16 @@ namespace Nayoo.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class mst_map
+    public partial class mst_event_type
     {
-        public int mapId { get; set; }
+        public int eventTypeId { get; set; }
         public string name { get; set; }
-        public string path { get; set; }
-        public Nullable<int> latitud { get; set; }
-        public Nullable<int> longtitud { get; set; }
+        public string description { get; set; }
         public string createdBy { get; set; }
         public Nullable<System.DateTime> createdDate { get; set; }
         public string updatedBy { get; set; }
         public Nullable<System.DateTime> updatedDate { get; set; }
         public Nullable<bool> isActive { get; set; }
-        public string mapUniqueId { get; set; }
+        public string eventUniqueTypeId { get; set; }
     }
 }

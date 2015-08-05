@@ -12,18 +12,20 @@ namespace Nayoo.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class mst_map
+    public partial class opt_event
     {
-        public int mapId { get; set; }
-        public string name { get; set; }
-        public string path { get; set; }
-        public Nullable<int> latitud { get; set; }
-        public Nullable<int> longtitud { get; set; }
+        public int eventId { get; set; }
+        public int eventTypeId { get; set; }
+        public string eventTypeUniqueId { get; set; }
+        public string houseNo { get; set; }
+        public string houseUniqueId { get; set; }
+        public int orgId { get; set; }
+        public string orgUniqueId { get; set; }
         public string createdBy { get; set; }
         public Nullable<System.DateTime> createdDate { get; set; }
         public string updatedBy { get; set; }
         public Nullable<System.DateTime> updatedDate { get; set; }
+        public string eventUniqueId { get; set; }
         public Nullable<bool> isActive { get; set; }
-        public string mapUniqueId { get; set; }
     }
 }
