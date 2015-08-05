@@ -91,9 +91,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PasswordHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -105,6 +105,10 @@
     <ProjectReference Include="..\Nayoo.APIs\Nayoo.APIs.csproj">
       <Project>{2A87CB2A-AC16-4DE2-8485-D190353C3857}</Project>
       <Name>Nayoo.APIs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nayoo.Business\Nayoo.Business.csproj">
+      <Project>{537f8457-a4b0-4304-aa05-cfc64c306018}</Project>
+      <Name>Nayoo.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
