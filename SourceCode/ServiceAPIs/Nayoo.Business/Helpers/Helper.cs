@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nayoo.Data.ClassHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,17 @@ namespace Nayoo.Business.Helpers
 {
     public class Helper
     {
+        public static async Task<List<Role>>GetUserRoles()
+        {
+            UserRoles u = new UserRoles();
+            return u.Roles;
+        }
+
         public static string NewUniqueId
         {
             get
             {
-                return Guid.NewGuid().ToString();
+                return Guid.NewGuid().ToString("N").Substring(1,30);
             }
         }
 

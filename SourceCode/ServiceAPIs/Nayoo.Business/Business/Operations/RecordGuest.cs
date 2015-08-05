@@ -11,8 +11,7 @@ using Nayoo.Business.Helpers;
 namespace Nayoo.Business.Operations
 {
     public class RecordGuest
-    {
-
+    {   
         public static async Task<opt_guest_record> Add(opt_guest_record entity)
         {
             try
@@ -27,8 +26,13 @@ namespace Nayoo.Business.Operations
                         if (Ok)
                             goto A;
 
+                        entity.isActive = true;
                         entity.recordUniqueId = _guidId;
+                        entity.createdDate = DateTime.Now;
+                        entity.updatedDate = DateTime.Now;
+                        entity.inDate = DateTime.Now; 
                         e.opt_guest_record.Add(entity);
+
                         var result = await e.SaveChangesAsync();
                         if (result <= 0)
                             throw new Exception("Record guest not complete !");
@@ -57,6 +61,7 @@ namespace Nayoo.Business.Operations
                         if (current == null)
                             throw new Exception("Not found this object !");
 
+                        entity.updatedDate = DateTime.Now;
                         e.Entry(entity).CurrentValues.SetValues(current);
                         var result = await e.SaveChangesAsync();
                         if (result <= 0)
@@ -79,7 +84,7 @@ namespace Nayoo.Business.Operations
             {
                 using (NayooDbEntities e = new NayooDbEntities())
                 {
-                    return e.opt_guest_record.ToList();
+                    return e.opt_guest_record.OrderByDescending(o => o.updatedDate).ToList();
                 }
             }
             catch (Exception ex)
@@ -88,7 +93,7 @@ namespace Nayoo.Business.Operations
             }
         }
 
-        public static async Task<opt_guest_record> Get(Int32 id , string uniqueId)
+        public static async Task<opt_guest_record> Get(Int32 id, string uniqueId)
         {
             try
             {
