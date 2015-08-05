@@ -40,28 +40,25 @@ namespace Nayoo.APIs.Providers
         {
 
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+            try
+            {
+                if (string.IsNullOrEmpty(context.UserName))
+                {
+                    context.SetError("error", "Invalid User Name.");
+                    return;
+                }
+                var user = await Business.Authorize.Authentication.Login(context.UserName, context.Password);
+                var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+                identity.AddClaim(new Claim("sub", context.UserName));
+                identity.AddClaim(new Claim("role", user.userRole));
+                context.Validated(identity);
+            }
+            catch (Exception ex)
+            {
+                context.SetError("error", ex.Message);
+                context.Rejected();
+            }
 
-
-            //Connection Infomation 
-            //string[] CustoAttribute;
-            //if (!context.Request.Headers.TryGetValue("CustomAttribute", out CustoAttribute))
-            //{
-            //    context.SetError("invalid_grant", "Invalid CustomAttributes Header");
-            //    return;
-            //} 
-
-            //if (string.IsNullOrEmpty(context.UserName))
-            //{
-            //    context.SetError("error", "Invalid User ID.");
-            //    return;
-            //}
-
-
-            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim("sub", context.UserName));
-            identity.AddClaim(new Claim("role", "User"));
-
-            context.Validated(identity);
         }
 
 
