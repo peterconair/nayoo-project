@@ -1,4 +1,69 @@
 <script>
+  var distSwipe = 0;
+  var trigSwipe = 0;
+  var tabPage = 1;
+  
+  document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+      var touch = e.touches[0];
+      switch(trigSwipe)
+      {
+        case 0 :
+          distSwipe = touch.pageX;
+          trigSwipe = 1;
+          break;
+        case 1 :
+          var direction = 0;
+          if(distSwipe > touch.pageX)
+          {
+            direction = 1;
+          }
+          
+          switch(tabPage)
+          {
+            case 1 :
+              if(direction == 1)
+              {
+                $('ul.tabs').tabs('select_tab', 'test2');
+                tabPage = 2;
+              }
+              break;
+            case 2 :
+              if(direction == 1)
+              {
+                $('ul.tabs').tabs('select_tab', 'test3');
+                tabPage = 3;
+              }
+              else
+              {
+                $('ul.tabs').tabs('select_tab', 'test1');
+                tabPage = 1;
+              }
+              break;
+            case 3 :
+              if(direction == 1)
+              {
+                $('ul.tabs').tabs('select_tab', 'test4');
+                tabPage = 4;
+              }
+              else
+              {
+                $('ul.tabs').tabs('select_tab', 'test2');
+                tabPage = 2;
+              }
+              break;
+            case 4 :
+              if(direction == 0)
+              {
+                $('ul.tabs').tabs('select_tab', 'test3');
+                tabPage = 3;
+              }
+              break;
+          }
+          trigSwipe = 0;
+          break;
+      }
+  }, false);
   
   $(document).ready(function(){
       feedClick();
@@ -21,20 +86,6 @@
       
   });
   
-  function cardClick() {
-    $( "#mainPage" ).load( "html/card.html" );
-  }
-  
-  function feedClick() {
-      var links = [
-          {
-              "bgcolor":"#64b5f6",
-              "icon":"+"
-          }
-      ]
-      $('.kc_fab_wrapper').kc_fab(links);
-  }
-  
 </script>
 
 <div class="row">
@@ -53,8 +104,8 @@
 
     <div id="test1" class="col s12">
     
-      <div class="kc_fab_wrapper" onclick="cardClick();">
-
+      <div class="kc_fab_wrapper" onclick="cardClick()">
+        
       </div>
       
         <div class="row">
