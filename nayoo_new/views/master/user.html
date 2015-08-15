@@ -44,73 +44,143 @@
             <div class="modal-header">
                 <h1 class="modal-title"></h1>
             </div>
+				<div style="background:url(img/c4.jpg) center center; background-size:cover">
+                <div class="wrapper-md bg-white-opacity">
+				        <div class="row m-t">
+          <div class="col-sm-7">
+            <a href class="thumb-lg pull-left m-r">
+              <img src="img/joi.png" class="img-circle">
+            </a>
+            <div class="clear m-b">
+              <div class="m-b m-t-sm">
+                <span class="h3 text-black">Yanakorn .Smith</span>
+                <small class="m-l">ลำพูน  ประเทศไทย</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="pull-right pull-none-xs text-center">
+              <a href class="m-b-md inline m">
+                <span class="h3 block font-bold">2k</span>
+                <small>Followers</small>
+              </a>
+              <a href class="m-b-md inline m">
+                <span class="h3 block font-bold">250</span>
+                <small>Following</small>
+              </a>
+            </div>
+          </div>
+        </div>
+                    </div>
+					</div>
             <form name="newMail" class="form-horizontal m-t-lg">
-                <div class="wrapper">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txthouseNo" name="houseNo" tabindex="1" ng-model="user.houseNo" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-5 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
-                                <div class="col-sm-7">
-                                    <select class="form-control input-sm select2me" data-placeholder="Select...">
-                                        <option value=""></option>
-                                        <option value="AL">ทวงหนี้</option>
-                                        <option value="WY">หาเด็ก</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtcarLicenseNo " name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+		<div class="col  bg-white-only b-l bg-auto no-border-xs">
+	<div class="nav-tabs-alt" >
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+          <a data-target="#tab-1" role="tab" data-toggle="tab">
+            <i class="glyphicon text-md text-muted wrapper-sm">ทั่วไป</i>
+          </a>
+        </li>
+        <li>
+          <a data-target="#tab-2" role="tab" data-toggle="tab">
+            <i class="glyphicon text-md text-muted wrapper-sm">ที่อยู่</i>
+          </a>
+        </li>
+        <li>
+          <a data-target="#tab-3" role="tab" data-toggle="tab">
+            <i class="glyphicon text-md text-muted wrapper-sm">...</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+	
+	<div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tab-1" >
+       					<div class="wrapper-md bg-white-opacity">
 					<div class="row">
-                        <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
+                                <label for="inputEmail3" class="col-sm-4 control-label"><span id="spnName">ชื่อผู้ใช้</span> :</label>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control" id="txthouseNo" name="houseNo" tabindex="1" ng-model="user.houseNo" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
+                                <label for="inputEmail3" class="col-sm-4 control-label"><span id="spnName">อีเมล</span>:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label for="inputEmail3" class="col-sm-4 control-label"><span id="spnName">รหัสผ่าน</span>:</label>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-5 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
-                                <div class="col-sm-7">
-                                    <select class="form-control input-sm select2me" data-placeholder="Select...">
-                                        <option value=""></option>
-                                        <option value="AL">ทวงหนี้</option>
-                                        <option value="WY">หาเด็ก</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
+                                <label for="inputPassword3" class="col-sm-4 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control" id="txtcarLicenseNo " name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
                                 </div>
                             </div>
+							<label class="col-sm-4 control-label"><span id="sex">เพศ</span> :</label>
+							<div class="col-sm-7" >
+							<div class="m-b-sm" >
+        <div class="btn-group" "ng-init="radioModel = 'Male'">
+          <label class="btn btn-sm btn-info"    ng-model="radioModel" btn-radio="'Male'"><i class="fa fa-check text-active"></i> Male</label>
+          <label class="btn btn-sm btn-success" ng-model="radioModel" btn-radio="'Female'"><i class="fa fa-check text-active"></i> Female</label>
+          <label class="btn btn-sm btn-primary" ng-model="radioModel" btn-radio="'N/A'"><i class="fa fa-check text-active"></i> N/A</label>
+		 </div>
+		 </div>
+		 </div>
+      </div>
                         </div>
-                    </div>
-                </div>
+	   </div>
+      <div role="tabpanel" class="tab-pane tab-2" id="tab-2">
+       
+          <div class="m-b-sm text-md">Chat</div>
+          <ul class="list-group no-borders pull-in auto">
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a1.jpg" alt="..." class="img-circle"></span>
+              <a href="#" class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Chris Fox</a></div>
+                <small class="text-muted">about 2 minutes ago</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a2.jpg" alt="..." class="img-circle"></span>
+              <a href="#" class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Amanda Conlan</a></div>
+                <small class="text-muted">about 2 hours ago</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a3.jpg" alt="..." class="img-circle"></span>
+              <a href class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Dan Doorack</a></div>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a4.jpg" alt="..." class="img-circle"></span>
+              <a href class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Lauren Taylor</a></div>
+                <small class="text-muted">about 2 minutes ago</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane tab-3" id="tab-3">
+          
+        </div>
+      </div>
+    </div>
+	  </div>
             </form>
             <div class="modal-footer">
                 <button class="btn btn-primary" ng-click="ok()">OK</button>

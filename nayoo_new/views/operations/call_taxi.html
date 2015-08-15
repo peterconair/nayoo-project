@@ -1,87 +1,266 @@
 
-<div ng-controller="ContactCtrl">
+<div ng-controller="CallTaxiCtrl">
     <div class="bg-light lter b-b wrapper-md">
-        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
+        <!--button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
             <i class="fa fa-plus"></i> Add
-        </button>
-        <h1 class="m-n font-thin h3">Call Taxi</h1>
+        </button-->
+        <h1 class="m-n font-thin h3">Operation</h1>
     </div>
-
-    <div class="hbox hbox-auto-xs hbox-auto-sm">
+<!-- timeline -->
+			  <div class="col-md-8">
+<div class="col  bg-white-only b-l bg-auto no-border-xs">
+	<div class="nav-tabs-alt" >
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+          <a data-target="#tab-1" role="tab" data-toggle="tab">
+            <i class="glyphicon glyphicon-user text-md text-muted wrapper-sm"> Guest Record</i>
+          </a>
+        </li>
+        <li>
+          <a data-target="#tab-2" role="tab" data-toggle="tab">
+            <i class="glyphicon glyphicon-comment text-md text-muted wrapper-sm"> Massage</i>
+          </a>
+        </li>
+        <li>
+          <a data-target="#tab-3" role="tab" data-toggle="tab">
+            <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm"> Call Taxi</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+	
+	<div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tab-1" >
         <div class="wrapper-md">
-            <!-- DataTable -->
-            <div class="panel panel-default">
-
-                <div class="table-responsive">
-                    <table ui-jq="dataTable" ui-options="{
-          sAjaxSource: 'api/datatable.json',
-          aoColumns: [
-            { mData: 'engine' },
-            { mData: 'browser' },
-            { mData: 'platform' },
-            { mData: 'version' },
-            { mData: 'grade' }
-          ]
-        }" class="table table-striped b-t b-b">
-                        <thead>
-                            <tr>
-                                <th style="width:20%">Rendering engine</th>
-                                <th style="width:25%">Browser</th>
-                                <th style="width:25%">Platform(s)</th>
-                                <th style="width:15%">Engine version</th>
-                                <th style="width:15%">CSS grade</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- /DataTable -->
+          <div class="m-b-sm text-md">Who to follow</div>
+          <ul class="list-group bg-auto no-borders pull-in">
+            <li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/a4.jpg" alt="..." class="img-circle">
+                <i class="on b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Chris Fox</a></div>
+                <small class="text-muted">Designer, Blogger</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/a5.jpg" alt="..." class="img-circle">
+                <i class="on b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Mogen Polish</a></div>
+                <small class="text-muted">Writter, Mag Editor</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/pong.png" alt="..." class="img-circle">
+                <i class="busy b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Pong</a></div>
+                <small class="text-muted">Project Manager</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/beam.png" alt="..." class="img-circle">
+                <i class="away b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Beam</a></div>
+                <small class="text-muted">Programer</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/joi.png" alt="..." class="img-circle">
+                <i class="away b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Yanakorn</a></div>
+                <small class="text-muted">Programer</small>
+              </div>
+            </li>
+			<li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/Toye.png" alt="..." class="img-circle">
+                <i class="away b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Sompob</a></div>
+                <small class="text-muted">Programer</small>
+              </div>
+            </li>
+			<li class="list-group-item">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/a8.jpg" alt="..." class="img-circle">
+                <i class="away b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Nuttapon</a></div>
+                <small class="text-muted">...</small>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="col w-md w-auto-xs bg-light dk bg-auto b-l hide" id="aside">
-            <div class="bg-light lter b-b wrapper-md">
-                <h2 class="m-n font-thin h4">Add/Edit Call Taxi</h2>
-            </div>
-            <form name="newMail" class="form-horizontal m-t-lg">
-                <div class="wrapper">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">บ้านเลขที่</span> :</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txthouseNo" name="houseNo" tabindex="1" ng-model="user.houseNo" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-5 control-label"><span id="spnName">ชื่อผู้มาติดต่อ</span>:</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtName" name="Name" tabindex="1" ng-model="user.Name" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-5 control-label"><span id="spnName">สาเหตุที่มาติดต่อ</span> :</label>
-                                <div class="col-sm-7">
-                                    <select class="form-control input-sm select2me" data-placeholder="Select...">
-                                        <option value=""></option>
-                                        <option value="AL">ทวงหนี้</option>
-                                        <option value="WY">หาเด็ก</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-5 control-label"><span id="spnNameEn">ทะเบียนรถ</span> :</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtcarLicenseNo " name="carLicenseNo " autocomplete="off" tabindex="2" ng-model="user.carLicenseNo ">
-                                </div>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button class="btn btn-primary" ng-click="ok()">OK</button>
-                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                            </div>
-                        </div>
-            </form>
-            </div>
-            </div>
+      </div>
+      <div role="tabpanel" class="tab-pane tab-2" id="tab-2">
+        <div class="wrapper-md">
+          <div class="m-b-sm text-md">Chat</div>
+          <ul class="list-group no-borders pull-in auto">
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a1.jpg" alt="..." class="img-circle"></span>
+              <a href="#" class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Chris Fox</a></div>
+                <small class="text-muted">about 2 minutes ago</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a2.jpg" alt="..." class="img-circle"></span>
+              <a href="#" class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Amanda Conlan</a></div>
+                <small class="text-muted">about 2 hours ago</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a3.jpg" alt="..." class="img-circle"></span>
+              <a href class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Dan Doorack</a></div>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span class="pull-left thumb-sm m-r"><img src="img/a4.jpg" alt="..." class="img-circle"></span>
+              <a href class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href="">Lauren Taylor</a></div>
+                <small class="text-muted">about 2 minutes ago</small>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div role="tabpanel" class="tab-pane tab-3" id="tab-3">
+        <div class="wrapper-md">
+          <div class="m-b-sm text-md">Transaction</div>
+          <ul class="list-group list-group-sm list-group-sp list-group-alt auto m-t">
+            <li class="list-group-item">
+              <span class="text-muted">Transfer to Jacob at 3:00 pm</span>
+              <span class="block text-md text-info">B 15,000.00</span>
+            </li>
+            <li class="list-group-item">
+              <span class="text-muted">Got from Mike at 1:00 pm</span>
+              <span class="block text-md text-primary">B 23,000.00</span>
+            </li>
+            <li class="list-group-item">
+              <span class="text-muted">Sponsored ORG at 9:00 am</span>
+              <span class="block text-md text-warning">B 3,000.00</span>
+            </li>
+            <li class="list-group-item">
+              <span class="text-muted">Send to Jacob at 8:00 am</span>
+              <span class="block text-md">B 11,000.00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	  </div>
+	</div>
+		  <!-- timeline -->
+	  <!-- .col -->
+	  <div class="col-md-4">
+  <div class="col bg-light dk b-r bg-auto" id="aside">
+    <div class="wrapper bg b-b">
+      <button class="btn btn-sm btn-success pull-right" ui-toggle-class="timeline-center" target=".timeline">Cler</button>
+      <h3 class="m-n font-thin">Timeline</h3>
+    </div>
+    <div class="wrapper">
+      <form>
+        <div class="form-group">
+          <label>บ้านเลขที่</label>
+          <input type="text" placeholder="บ้านเลขที่ ..." class="input-sm form-control">
+        </div>
+        <div class="form-group">
+          <label>ทะเบียนรถ</label>
+          <input type="text" placeholder="ทะเบียนรถ ..." class="input-sm form-control">
+        </div>
+        <div class="form-group">
+          <label>เบอร์โทร</label>
+          <input type="text" placeholder="Phone" class="input-sm form-control">
+        </div>
+			<div class="btn-group" dropdown>
+            <button type="button" class="btn btn-danger">สถานะ</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" dropdown-toggle>
+              <span class="caret"></span>
+              <span class="sr-only">Split button!</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href>Action</a></li>
+              <li><a href>Another action</a></li>
+              <li><a href>Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href>Separated link</a></li>
+            </ul>
+			</div>
+			<div class="form-group">
+			<div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-green-sharp" div class="form-group">
+                                        <div class="col-sm-6">
+                                            <i class="font-green-sharp"></i>
+                                            <span class="caption-subject bold uppercase">รูปภาพ</span>
+                                        </div>
+                                        <div class="col-sm-6" id="btnPicture" align=right>
+                                            <button type="file" nv-file-select="" uploader="uploader" class="btn btn-success btn-s">
+                                                <span class="glyphicon glyphicon-download"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                                                <span class="glyphicon glyphicon-upload"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="table-scrollable table-scrollable-borderless">
+                                        <table class="table table-hover table-light">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th width="80%">Preview</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="item in uploader.queue">
+                                                    <td><strong>{{ item.file.name }}</strong>
+                                                    </td>
+                                                    <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                                    <td ng-show="uploader.isHTML5">
+                                                        <div class="progress progress-sm" style="margin-bottom: 0;">
+                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span ng-show="item.isSuccess" class="text-success"><i class="glyphicon glyphicon-ok"></i></span>
+                                                        <span ng-show="item.isCancel" class="text-info"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                                                        <span ng-show="item.isError" class="text-danger"><i class="glyphicon glyphicon-remove"></i></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+							</div>
+      </form>
+	  <div class="m-t-md m-b-md"><button class="btn btn-sm btn-primary">Add an event</button></div>
+    </div>
+  </div>
+   </div>
+  <!-- /.col -->
